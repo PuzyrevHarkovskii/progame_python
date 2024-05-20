@@ -4,7 +4,10 @@ import Editor from '@monaco-editor/react';
 
 const Playground = () => {
     return (
-        <Editor height="90vh" defaultLanguage="javascript" defaultValue="// some comment" />
+        <Editor height="40vh" defaultLanguage="python" defaultValue="// some comment" options={{
+            fontSize: 20,
+            language: 'python',
+        }}/>
     )
 }
 
