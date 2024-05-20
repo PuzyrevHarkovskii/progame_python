@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import { Container, Box, Heading, Text } from '@chakra-ui/react';
+import { Container, Box, Heading, Text, Code } from '@chakra-ui/react';
 import Codeblock from '@/components/PythonCell';
 import { PythonProvider } from 'react-py';
 import {
@@ -10,6 +10,7 @@ import {
   OrderedList,
   UnorderedList,
 } from '@chakra-ui/react'
+
 
 export default function FirstSteps() {
   return (
@@ -37,6 +38,8 @@ export default function FirstSteps() {
   <Heading my='1em' size='xl' textAlign={'center'}>Запуск программы</Heading>
   <Text>Нажмите на кнопку, чтобы запустить программу. Внизу, в поле результатов, вы увидите текст:</Text>
 </UnorderedList>
+<Code>Привет, мир!</Code>
+<Text>Если все так и есть, поздравляю! Вы только что написали свою первую программу на Python.</Text>
       </Container>
     </div>
   );

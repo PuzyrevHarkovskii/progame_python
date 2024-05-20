@@ -1,13 +1,10 @@
 'use client'
 import { PythonProvider } from 'react-py'
 import  Codeblock  from '@/components/PythonCell'
-import { createContext, useEffect } from 'react'
-import CodeSnippet from '@/components/Snippet'
+import { useEffect } from 'react'
 import { NextUIProvider } from '@nextui-org/system'
 import Link from 'next/link'
-
-
-
+import PythonEditor from '@/components/PythonCell-2'
 
 
 
@@ -27,11 +24,14 @@ export default function Home() {
   return (
     <>
     <PythonProvider>
+    
     <NextUIProvider>
-    <CodeSnippet/>
-    <Link href="/lessons">К уроку</Link>
+   
+    <Link href="/lessons/lesson-1">К уроку</Link>
+    <Link href="/lessons/lesson-2">К уроку</Link>
+    
     <main>
-      
+      <PythonEditor/>
         <Codeblock />
       </main>
       </NextUIProvider>

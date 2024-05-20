@@ -1,17 +1,21 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { usePython } from 'react-py'
-import Editor from '@monaco-editor/react';
+import CodeMirror from '@uiw/react-codemirror'
+import { python } from '@codemirror/lang-python'
+import { dracula } from '@uiw/codemirror-theme-dracula'
+import { FaPlay } from "react-icons/fa";
 
-function Codeblock() {
-  const [input, setInput] = useState('')
+
+function Codeblock3() {
+  const [input, setInput] = useState("print('hello world')")
 
   useEffect(() => {
     navigator.serviceWorker
       .register('/react-py-sw.js')
       .then((registration) =>
         console.log(
-          'Service Worker registration успешна с областью: ',
+          'Service Worker registration прошла успешно: ',
           registration.scope
         )
       )
@@ -26,43 +30,41 @@ function Codeblock() {
     runPython(input)
   }
 
-  const handleEditorChange = (value: string | undefined) => {
-    if (value !== undefined) {
-      setInput(value)
-    }
-  }
+  const handleEditorChange = useCallback((val: string, viewUpdate: any) => {
+    console.log('val:', val)
+    setInput(val)
+  }, [])
 
   return (
     <>
-      <div className="relative color-black mb-10 flex flex-col">
-        {isLoading ? <p>Загрузка...</p> : <p>Готово!</p>}
+      <div className="relative color-red mb-10 flex flex-col">
+        {isLoading ? <p>Загрузка...</p> : <p>Компилятор готов</p>}
         <form onSubmit={handleSubmit}>
-          <Editor
-            onChange={handleEditorChange}
+            
+          <CodeMirror
+            value={input}
             height="20vh"
-            defaultLanguage="python"
-            defaultValue="// some comment"
-            options={{
-              fontSize: 20,
-              language: 'python',
-            }}
+            extensions={[python()]}
+            onChange={handleEditorChange}
+            theme={dracula}
+            style={{ fontSize: '1.5em' }}
           />
-         
+          
           <input
             type="submit"
-            value={!isRunning ? 'Run' : 'Running...'}
+            value={!isRunning ? 'Запуск кода' : 'В процессе...'}
             disabled={isLoading || isRunning}
           />
         </form>
 
         {isAwaitingInput && (
           <form onSubmit={(e) => {
-            e.preventDefault();
+            e.preventDefault()
             const form = e.target as HTMLFormElement
             const inputElement = form.elements.namedItem('input') as HTMLInputElement
             if (inputElement) {
-              sendInput(inputElement.value);
-              inputElement.value = '';
+              sendInput(inputElement.value)
+              inputElement.value = ''
             }
           }}>
             <input
@@ -86,4 +88,5 @@ function Codeblock() {
     </>
   )
 }
-export default Codeblock
+
+export default Codeblock3

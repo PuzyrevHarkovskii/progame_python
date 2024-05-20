@@ -12,9 +12,12 @@ function PythonEditor() {
   }, []);
   return <CodeMirror value={value}
    height="200px"
+   
       extensions={[python()]}
      onChange={onChange}
+     
      theme={dracula}
+     
      />;
 }
 export default PythonEditor;
