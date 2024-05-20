@@ -1,3 +1,6 @@
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
+import Navbar from "@/components/ui/Navbar";
+import { ChakraProvider } from "@chakra-ui/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 // import "./globals.css";
@@ -16,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ChakraProvider>
+        <Navbar/>
+        <ProgressBar/>
+          {children}
+          
+          </ChakraProvider></body>
     </html>
   );
 }

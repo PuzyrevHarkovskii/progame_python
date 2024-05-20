@@ -2,11 +2,13 @@
 import { PythonProvider } from 'react-py'
 import  Codeblock  from '@/components/PythonCell'
 import { createContext, useEffect } from 'react'
-import Playground from '@/components/Playground';
-import PythonEditor from '@/components/PythonCell-2';
-import CodeEditor from '@/components/React-py';
+import CodeSnippet from '@/components/Snippet'
+import { NextUIProvider } from '@nextui-org/system'
+import Link from 'next/link'
 
-import "./globals.css";
+
+
+
 
 
 export default function Home() {
@@ -25,11 +27,14 @@ export default function Home() {
   return (
     <>
     <PythonProvider>
-     
+    <NextUIProvider>
+    <CodeSnippet/>
+    <Link href="/lessons">К уроку</Link>
     <main>
+      
         <Codeblock />
       </main>
-      
+      </NextUIProvider>
     </PythonProvider>
     </>
   );
