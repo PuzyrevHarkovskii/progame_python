@@ -17,6 +17,7 @@ export default function SecondSteps() {
   return (
     <div>
       <PythonProvider>
+        
      <Codeblock3/>
      </PythonProvider>
     </div>

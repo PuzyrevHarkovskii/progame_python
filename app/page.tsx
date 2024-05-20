@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import { NextUIProvider } from '@nextui-org/system'
 import Link from 'next/link'
 import PythonEditor from '@/components/PythonCell-2'
-
+import "./globals.css";
 
 
 export default function Home() {

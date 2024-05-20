@@ -5,6 +5,8 @@ import CodeMirror from '@uiw/react-codemirror'
 import { python } from '@codemirror/lang-python'
 import { dracula } from '@uiw/codemirror-theme-dracula'
 import { FaPlay } from "react-icons/fa";
+import { Container, Box, Heading, Text, Code } from '@chakra-ui/react';
+import {  Flex, Button, Input, VStack, useColorModeValue } from '@chakra-ui/react';
 
 
 function Codeblock3() {
@@ -37,23 +39,35 @@ function Codeblock3() {
 
   return (
     <>
+    <Flex
+      
+      justify="center"
+      minHeight="1vh"
+     
+      p={4}
+    >
       <div className="relative color-red mb-10 flex flex-col">
-        {isLoading ? <p>Загрузка...</p> : <p>Компилятор готов</p>}
+        
         <form onSubmit={handleSubmit}>
-            
+        <div className="p-4 sm:min-w-[35em] bg-gray-800 rounded-xl shadow-lg shadow-gray-700/50 ">
           <CodeMirror
             value={input}
             height="20vh"
             extensions={[python()]}
             onChange={handleEditorChange}
             theme={dracula}
-            style={{ fontSize: '1.5em' }}
+            
+            style={{ fontSize: '1.5em', }}
           />
+          </div>
           
           <input
             type="submit"
             value={!isRunning ? 'Запуск кода' : 'В процессе...'}
             disabled={isLoading || isRunning}
+            className={`px-4 py-2 rounded-md text-white font-semibold 
+    ${isLoading || isRunning ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50'}
+  `}
           />
         </form>
 
@@ -72,7 +86,7 @@ function Codeblock3() {
               type="text"
               placeholder='Enter'
             />
-            <button type="submit">Submit</button>
+            <button type="submit">Ввести</button>
           </form>
         )}
 
@@ -82,9 +96,10 @@ function Codeblock3() {
         </pre>
         <p>Ошибка: </p>
         <pre>
-          <code>{stderr}</code>
+          <code className="text-red-500">{stderr}</code>
         </pre>
       </div>
+      </Flex>
     </>
   )
 }
