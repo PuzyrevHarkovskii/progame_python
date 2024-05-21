@@ -4,14 +4,14 @@ import { PythonProvider } from "react-py";
 import {
   List,
   ListItem,
-  ListIcon,
-  OrderedList,
   UnorderedList,
 } from "@chakra-ui/react";
 import Codeblock3 from "@/components/PythonCell-3";
-import CodeSnippet from "@/components/CodeSnippets";
+import CodeFragment from '@/components/CodeFragment'
+
 
 export default function FirstSteps() {
+
   return (
     <div>
       <Container maxW="container.md">
@@ -30,6 +30,7 @@ export default function FirstSteps() {
             исходным кодом. Он похож на обычный человеческий язык, но только с
             более строгими правилами.
           </Text>
+          <CodeFragment code={`string = input()\ni = 0\nwhile i < len(string):\n    if string[i] == '!':\n        break\n    print(string[i])\n    i = i + 1\nelse:\n    print('Восклицательного знака не найдено')`} language={'python'} showLineNumbers={false}></CodeFragment>
           <Text>
             Изучение языка программирования принято начинать с написания
             программы, которая выводит на экран фразу «Привет, мир!». Мы будем
@@ -59,6 +60,7 @@ export default function FirstSteps() {
             Нажмите на кнопку, чтобы запустить программу. Внизу, в поле
             результатов, вы увидите текст:
           </Text>
+          
         <Code>Привет, мир!</Code>
         <Text mb={5}>
           Если все так и есть, поздравляю! Вы только что написали свою первую
@@ -94,6 +96,7 @@ export default function FirstSteps() {
           ван Россум, назвал его не из‑за большой любви к змеям, а в честь
           комедийного шоу «Летающий цирк Монти Пайтона».
         </Text>
+
         <Text>
           Синтаксис Python легко освоить даже новичкам. Начать программировать
           на Python просто, но это не означает, что вы не сможете создавать

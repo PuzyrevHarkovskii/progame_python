@@ -23,7 +23,7 @@ const Quiz: React.FC<QuizProps> = ({ options, correctAnswers }) => {
     const isCorrect =
       selectedOptions.length === correctAnswers.length &&
       selectedOptions.every((option) => correctAnswers.includes(option));
-    setResult(isCorrect ? 'Correct!' : 'Incorrect, try again.');
+    setResult(isCorrect ? 'Правильно! 🎉' : 'Неверно, попробуйте снова.');
   };
 
   return (
@@ -41,10 +41,10 @@ const Quiz: React.FC<QuizProps> = ({ options, correctAnswers }) => {
         ))}
       </Stack>
       <Button mt={5} colorScheme="teal" onClick={handleSubmit}>
-        Submit
+        Проверить
       </Button>
       {result && (
-        <Text mt={5} fontSize="lg" color={result === 'Correct!' ? 'green.500' : 'red.500'}>
+        <Text mt={5} fontSize="lg" color={result === 'Правильно! 🎉' ? 'green.500' : 'red.500'}>
           {result}
         </Text>
       )}

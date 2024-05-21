@@ -54,17 +54,17 @@ function Codeblock3() {
 
   return (
     <>
-      <Flex justify="center" minHeight="1vh" p={2}>
+      <Flex justify="left" width='100%' minHeight="1vh" p={2}>
         <div className="relative color-red mb-10 flex flex-col">
           <form onSubmit={handleSubmit}>
-            <div className="p-4 sm:min-w-[35em] bg-gray-800 rounded-xl shadow-lg shadow-gray-700/50 ">
+            <div className="p-4 sm:min-w-[44em] bg-gray-800 rounded-md shadow-lg shadow-gray-700/50 ">
               <CodeMirror
                 value={input}
                 height="20vh"
                 extensions={[python()]}
                 onChange={handleEditorChange}
                 theme={dracula}
-                style={{ fontSize: "1.5em" }}
+                style={{ fontSize: "1.4em" }}
               />
             </div>
 

@@ -11,15 +11,13 @@ import {
   UnorderedList,
 } from '@chakra-ui/react'
 import Codeblock3 from '@/components/PythonCell-3';
+import { CopyBlock } from 'react-code-blocks';
 
 
 export default function SecondSteps() {
   return (
     <div>
-      <PythonProvider>
-        
-     <Codeblock3/>
-     </PythonProvider>
+     
     </div>
   );
 }
