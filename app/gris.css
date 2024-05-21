@@ -1,0 +1,8 @@
+body {
+    background: 
+      linear-gradient(180deg, transparent 0px, rgba(128, 128, 128, 0.5) 1px, transparent 0px),
+      linear-gradient(90deg, transparent 0px, rgba(128, 128, 128, 0.5) 1px, transparent 0px);
+    background-size: 1em 1em, 1em 1em;
+    background-color: white;
+  }
+  

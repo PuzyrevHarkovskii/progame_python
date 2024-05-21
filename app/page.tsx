@@ -1,10 +1,18 @@
 "use client";
+import {
+  Box,
+  Container,
+  Heading,
+  OrderedList,
+  ListItem,
+  UnorderedList,
+} from "@chakra-ui/react";
 import { useEffect } from "react";
 import { NextUIProvider } from "@nextui-org/system";
 import Link from "next/link";
 import "./globals.css";
 import Quiz from "@/components/Quiz";
-import CodeFragment from '../components/CodeFragment'
+import CodeFragment from "../components/CodeFragment";
 
 export default function Home() {
   useEffect(() => {
@@ -20,14 +28,40 @@ export default function Home() {
   }, []);
   const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
   const correctAnswers = ["Option 1", "Option 3"];
+  const question = "Какой самый большой океан на Земле?";
   return (
     <>
-      <NextUIProvider>
-        <Link href="/lessons/lesson-1">К уроку</Link>
-        <Link href="/lessons/lesson-2">К уроку</Link>
-        <CodeFragment code={`string = input()\ni = 0\nwhile i < len(string):\n    if string[i] == '!':\n        break\n    print(string[i])\n    i = i + 1\nelse:\n    print('Восклицательного знака не найдено')`} language={'python'} showLineNumbers={false}></CodeFragment>
-        <Quiz options={options} correctAnswers={correctAnswers} />
-      </NextUIProvider>
+      <Container maxW="container.md">
+        <Box p={5}>
+          <Heading mb="0.5em" mt="1em" size="xl" textAlign={"left"}>
+            Учебник Python
+          </Heading>
+          <OrderedList>
+            <ListItem>
+              <Link target="_blank" href="/lessons/GetStarted">
+                Начало
+              </Link>
+            </ListItem>
+            <ListItem>
+              {" "}
+              Переменные
+              <UnorderedList>
+                <ListItem>
+                  <Link target="_blank" href="/lessons/Variables-Start">
+                    Что такое переменная?
+                  </Link>
+                </ListItem>
+                <ListItem><Link target="_blank" href="/lessons/Variables-Operations">
+                    Операции над переменными
+                  </Link></ListItem>
+              </UnorderedList>
+            </ListItem>
+            <ListItem></ListItem>
+            <ListItem></ListItem>
+            <ListItem></ListItem>
+          </OrderedList>
+        </Box>
+      </Container>
     </>
   );
 }

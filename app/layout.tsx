@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/ui/Footer";
 import "./globals.css";
 import { GeistProvider, CssBaseline } from "@geist-ui/core";
+import { Global } from "@emotion/react";
 
 const inter = Inter({ subsets: ["latin"] });
 

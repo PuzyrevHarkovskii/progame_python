@@ -1,13 +1,14 @@
 // components/Quiz.tsx
 import { useState } from 'react';
-import { Box, Button, Checkbox, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Checkbox, Stack, Text, Heading } from '@chakra-ui/react';
 
 interface QuizProps {
+  question: string;
   options: string[];
   correctAnswers: string[];
 }
 
-const Quiz: React.FC<QuizProps> = ({ options, correctAnswers }) => {
+const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswers }) => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [result, setResult] = useState<string | null>(null);
 
@@ -28,6 +29,12 @@ const Quiz: React.FC<QuizProps> = ({ options, correctAnswers }) => {
 
   return (
     <Box textAlign="center" py={10}>
+      <Heading mb="0.5em" size="md" textAlign="center">
+        {question}
+      </Heading>
+      <Text pb={4} align="center">
+      Выберите все правильные варианты.
+          </Text>
       <Stack spacing={5} direction="column" align="center">
         {options.map((option) => (
           <Checkbox

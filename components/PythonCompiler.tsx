@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 
 function PythonCompiler() {
-  const [input, setInput] = useState(" ");
+  const [input, setInput] = useState("");
   const startState = EditorState.create({
     doc: 'Hello World',
     extensions: [placeholder('placeholder text')]
@@ -63,11 +63,11 @@ function PythonCompiler() {
 
   return (
     <>
-      <Flex justify="center"  pt={5} pb={1}>
+      <Flex justify="center" pt={5} pb={1}>
         <div className="relative color-red mb-10 flex flex-col">
           <form onSubmit={handleSubmit}>
-            <div className="p-4 sm:min-w-[30em] md:min-w-[40em] bg-gray-800 rounded-md shadow-lg shadow-gray-700/50 width-100%">
-              <CodeMirror
+            <div  className="p-4 sm:w-full md:min-w-[43em] bg-gray-800 rounded-md shadow-lg shadow-gray-700/50 width-100%">
+              <CodeMirror 
                 value={input}
                 height="100%"
                 width="100%"
@@ -75,7 +75,7 @@ function PythonCompiler() {
                 onChange={handleEditorChange}
                 theme={dracula}
                 style={{ fontSize: "1.4em" }}
-                placeholder="Code goes here..."
+                placeholder="Здесь можно писать и запускать код!"
               />
             </div>
 
@@ -136,7 +136,7 @@ function PythonCompiler() {
           >
             <code>
               <Text sx={{ userSelect: "none" }} color={"gray.500"}>
-                Результат:{" "}
+                Результат:{""}
               </Text>
               {stdout}
             </code>
@@ -154,7 +154,7 @@ function PythonCompiler() {
           >
             <code>
               <Text sx={{ userSelect: "none" }} color={"gray.500"}>
-                Ошибка:{" "}
+                Ошибка:{""}
               </Text>
               {stderr}
             </code>
