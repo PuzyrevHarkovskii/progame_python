@@ -54,7 +54,7 @@ function Codeblock3() {
 
   return (
     <>
-      <Flex justify="center" minHeight="1vh" p={4}>
+      <Flex justify="center" minHeight="1vh" p={2}>
         <div className="relative color-red mb-10 flex flex-col">
           <form onSubmit={handleSubmit}>
             <div className="p-4 sm:min-w-[35em] bg-gray-800 rounded-xl shadow-lg shadow-gray-700/50 ">
@@ -72,7 +72,7 @@ function Codeblock3() {
               type="submit"
               value={!isRunning ? "Запуск кода" : "В процессе..."}
               disabled={isLoading || isRunning}
-              className={`px-4 py-2 rounded-md text-white font-semibold 
+              className={`px-4 my-3 py-2 rounded-md text-white font-semibold 
     ${
       isLoading || isRunning
         ? "bg-gray-400 cursor-not-allowed"
@@ -101,14 +101,34 @@ function Codeblock3() {
             </form>
           )}
 
-          <p>Результат: </p>
-          <pre>
-            <code>{stdout}</code>
-          </pre>
-          <p>Ошибка: </p>
-          <pre>
-            <code className="text-red-500">{stderr}</code>
-          </pre>
+<Text fontSize="xl" mb="0.5em">Результат:</Text>
+<Box 
+        as="pre"
+        bg="rgba(0, 0, 0, 0.05)" // Полупрозрачный фон
+        p="1em"
+        mb={'0.5em'}
+        borderRadius="md"
+        border="1px solid"
+        borderColor="gray.200"
+        whiteSpace="pre-wrap" // Для отображения длинных строк
+        overflowX="auto"
+      >
+        <code>{stdout}</code>
+      </Box>
+      <Text fontSize="xl"  mb="0.5em">Ошибка:</Text>
+          <Box 
+        as="pre"
+        bg="rgba(0, 0, 0, 0.05)" // Полупрозрачный фон
+        p="1em"
+        borderRadius="md"
+        border="1px solid"
+        borderColor="gray.200"
+        whiteSpace="pre-wrap" // Для отображения длинных строк
+        overflowX="auto"
+        color="red.500"
+      >
+        <code>{stderr}</code>
+      </Box>
         </div>
       </Flex>
     </>

@@ -1,12 +1,13 @@
 import React, { ReactNode, useState } from 'react';
 import { Box, Code, IconButton, useClipboard, Tooltip, Flex } from '@chakra-ui/react';
 import { CopyIcon, CheckIcon } from '@chakra-ui/icons';
+import { Wrap, WrapItem } from '@chakra-ui/react'
 
-interface CodeBlockProps {
+interface CodeSnippetProps {
   children: ReactNode;
 }
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ children }) => {
+const CodeSnippet: React.FC<CodeSnippetProps> = ({ children }) => {
   const { hasCopied, onCopy } = useClipboard(children as string);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -17,8 +18,8 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children }) => {
       onMouseEnter={() => setIsHovered(true)} 
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Box width="100%" overflowX="auto" bg="gray.100" my={5} p={4} borderRadius="xl">
-        <Code whiteSpace="pre" width="100%">
+      <Box whiteSpace="pre-wrap" width="100%" overflowX="auto" bg="gray.100" my={5} p={4} borderRadius="xl">
+        <Code whiteSpace="pre-wrap" width="100%">
           {children}
         </Code>
       </Box>
@@ -39,4 +40,4 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children }) => {
   );
 };
 
-export default CodeBlock;
+export default CodeSnippet;
