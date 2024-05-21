@@ -13,6 +13,7 @@ import Link from "next/link";
 import "./globals.css";
 import Quiz from "@/components/Quiz";
 import CodeFragment from "../components/CodeFragment";
+import NavigationButtons from "@/components/ui/NavigationButtons";
 
 export default function Home() {
   useEffect(() => {
@@ -51,15 +52,23 @@ export default function Home() {
                     Что такое переменная?
                   </Link>
                 </ListItem>
-                <ListItem><Link target="_blank" href="/lessons/Variables-Operations">
+                <ListItem>
+                  <Link target="_blank" href="/lessons/Variables-Operations">
                     Операции над переменными
-                  </Link></ListItem>
+                  </Link>
+                </ListItem>
               </UnorderedList>
             </ListItem>
             <ListItem></ListItem>
             <ListItem></ListItem>
             <ListItem></ListItem>
           </OrderedList>
+          <NavigationButtons
+            
+            leftButtonLink="/lessons/Variables-Start"
+           
+            rightButtonLink="/lessons/Variables-Operations"
+          />
         </Box>
       </Container>
     </>
