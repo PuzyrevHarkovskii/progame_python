@@ -1,6 +1,7 @@
 "use client";
 import { Container, Box, Heading, Text, Code } from "@chakra-ui/react";
 import { PythonProvider } from "react-py";
+import { CheckCircleIcon } from "@chakra-ui/icons"; 
 import { List, ListItem, UnorderedList, Image } from "@chakra-ui/react";
 import PythonCompiler from "@/components/PythonCell-3";
 import CodeFragment from "@/components/CodeFragment";
@@ -40,7 +41,8 @@ export default function FirstSteps() {
             showLineNumbers={false}
           ></CodeFragment>
           <Text>Обратите внимание на следующие моменты:</Text>
-          <UnorderedList>
+          
+          <UnorderedList spacing={3}>
           <ListItem> Слово <Code>print</Code> должно быть написано строчными буквами. Python чувствителен к регистру, поэтому <Code>Print</Code> и <Code>print</Code> для него разные слова;</ListItem>
             <ListItem>
               Кавычки должны быть такими же, как в примере. Кавычки-елочки <Code>«»</Code>
@@ -129,11 +131,11 @@ export default function FirstSteps() {
             ван Россум, назвал его не из‑за большой любви к змеям, а в честь
             комедийного шоу «Летающий цирк Монти Пайтона».
           </Text>
-           <Image
+           {/* <Image
             py={"5"}
             rounded={'lg'}
             src={`/Images/monty_python.gif`}
-          ></Image>
+          ></Image> */}
           <Text>
             Синтаксис Python легко освоить даже новичкам. Начать программировать
             на Python просто, но это не означает, что вы не сможете создавать
