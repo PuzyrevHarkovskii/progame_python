@@ -14,8 +14,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-function Codeblock3() {
-  const [input, setInput] = useState("print('hello world')");
+function PythonCompiler() {
+  const [input, setInput] = useState(" ");
 
   useEffect(() => {
     navigator.serviceWorker
@@ -54,7 +54,7 @@ function Codeblock3() {
 
   return (
     <>
-      <Flex justify="left" width='100%' minHeight="1vh" p={2}>
+      <Flex justify="left" width="100%" minHeight="1vh" p={2}>
         <div className="relative color-red mb-10 flex flex-col">
           <form onSubmit={handleSubmit}>
             <div className="p-4 sm:min-w-[44em] bg-gray-800 rounded-md shadow-lg shadow-gray-700/50 ">
@@ -154,4 +154,4 @@ function Codeblock3() {
   );
 }
 
-export default Codeblock3;
+export default PythonCompiler;
