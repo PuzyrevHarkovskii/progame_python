@@ -8,6 +8,7 @@ import "./globals.css";
 import { GeistProvider, CssBaseline } from "@geist-ui/core";
 import { Global } from "@emotion/react";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

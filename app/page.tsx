@@ -57,16 +57,20 @@ export default function Home() {
                     Операции над переменными
                   </Link>
                 </ListItem>
+                <ListItem>
+                  <Link target="_blank" href="/lessons/PEP8">
+                    Что такое PEP8?
+                  </Link>
+                </ListItem>
               </UnorderedList>
+              <ListItem>Строки</ListItem>
             </ListItem>
             <ListItem></ListItem>
             <ListItem></ListItem>
             <ListItem></ListItem>
           </OrderedList>
           <NavigationButtons
-            
             leftButtonLink="/lessons/Variables-Start"
-           
             rightButtonLink="/lessons/Variables-Operations"
           />
         </Box>
