@@ -28,9 +28,7 @@ export default function FirstSteps() {
         <Heading my='1em' size='xl' textAlign={'center'}>Редактор кода</Heading>
       <Text>Наберите следующий текст в редакторе ниже. </Text>
 
-      <PythonProvider>
-    <Codeblock3/>
-    </PythonProvider>
+      
     <Text>Обратите внимание на следующие моменты:</Text>
     <UnorderedList>
   <ListItem>Слово print должно быть написано строчными буквами. Python чувствителен к регистру, поэтому Printи print для него разные слова;</ListItem>
@@ -46,6 +44,9 @@ export default function FirstSteps() {
       <Text>В прошлом уроке вы создали свою первую программу на Python: слово print, открывающая скобка, кавычка, приветствие, еще одна кавычка и скобка. Код был написан по правилам Python и поэтому все сработало, как надо. Эти правила называются синтаксисом и если нарушить их, программа не заработает.</Text>
       <CodeSnippet>Привет</CodeSnippet>
       </Container>
+      <PythonProvider>
+    <Codeblock3/>
+    </PythonProvider>
     </div>
   );
 }
