@@ -9,6 +9,7 @@ import {
   UnorderedList,
 } from '@chakra-ui/react'
 import Codeblock3 from '@/components/PythonCell-3';
+import CodeSnippet from '@/components/CodeSnippets';
 
 
 export default function FirstSteps() {
@@ -38,7 +39,12 @@ export default function FirstSteps() {
   <Text>Нажмите на кнопку, чтобы запустить программу. Внизу, в поле результатов, вы увидите текст:</Text>
 </UnorderedList>
 <Code>Привет, мир!</Code>
-<Text>Если все так и есть, поздравляю! Вы только что написали свою первую программу на Python.</Text>
+<Text>Если все так и есть, поздравляю! Вы только что написали свою первую программу на Python!</Text>
+<Heading my='1em' size='xl' textAlign={'center'}>
+Ошибки
+      </Heading>
+      <Text>В прошлом уроке вы создали свою первую программу на Python: слово print, открывающая скобка, кавычка, приветствие, еще одна кавычка и скобка. Код был написан по правилам Python и поэтому все сработало, как надо. Эти правила называются синтаксисом и если нарушить их, программа не заработает.</Text>
+      <CodeSnippet>Привет</CodeSnippet>
       </Container>
     </div>
   );

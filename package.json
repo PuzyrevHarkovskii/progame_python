@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/next-js": "^2.2.0",
     "@chakra-ui/react": "^2.8.2",
     "@codemirror/lang-python": "^6.1.6",
@@ -36,6 +37,7 @@
     "react-ace": "^11.0.1",
     "react-code-block": "^1.0.0",
     "react-code-blocks": "^0.1.6",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
     "react-py": "^1.10.7"
