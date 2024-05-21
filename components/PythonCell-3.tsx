@@ -96,39 +96,58 @@ function Codeblock3() {
                 }
               }}
             >
-              <input name="input" type="text" placeholder="Enter" />
-              <button type="submit">Ввести</button>
+              <Input
+                name="input"
+                type="text"
+                placeholder="Ввод: "
+                size="md"
+                borderColor="gray.300"
+                focusBorderColor="blue.500"
+                borderRadius="md"
+                mb={3}
+              />
+              <Button my={2} type="submit" colorScheme="blue" size="md">
+                Ввести
+              </Button>
             </form>
           )}
 
-<Text fontSize="xl" mb="0.5em">Результат:</Text>
-<Box 
-        as="pre"
-        bg="rgba(0, 0, 0, 0.05)" // Полупрозрачный фон
-        p="1em"
-        mb={'0.5em'}
-        borderRadius="md"
-        border="1px solid"
-        borderColor="gray.200"
-        whiteSpace="pre-wrap" // Для отображения длинных строк
-        overflowX="auto"
-      >
-        <code>{stdout}</code>
-      </Box>
-      <Text fontSize="xl"  mb="0.5em">Ошибка:</Text>
-          <Box 
-        as="pre"
-        bg="rgba(0, 0, 0, 0.05)" // Полупрозрачный фон
-        p="1em"
-        borderRadius="md"
-        border="1px solid"
-        borderColor="gray.200"
-        whiteSpace="pre-wrap" // Для отображения длинных строк
-        overflowX="auto"
-        color="red.500"
-      >
-        <code>{stderr}</code>
-      </Box>
+          <Box
+            as="pre"
+            bg="rgba(0, 0, 0, 0.05)" // Полупрозрачный фон
+            p="1em"
+            mb={"0.5em"}
+            borderRadius="xl"
+            border="1px solid"
+            borderColor="gray.200"
+            whiteSpace="pre-wrap" // Для отображения длинных строк
+            overflowX="auto"
+          >
+            <code>
+              <Text sx={{ userSelect: "none" }} color={"gray.500"}>
+                Результат:{" "}
+              </Text>
+              {stdout}
+            </code>
+          </Box>
+          <Box
+            as="pre"
+            bg="rgba(0, 0, 0, 0.05)" // Полупрозрачный фон
+            p="1em"
+            borderRadius="xl"
+            border="1px solid"
+            borderColor="gray.200"
+            whiteSpace="pre-wrap" // Для отображения длинных строк
+            overflowX="auto"
+            color="red.500"
+          >
+            <code>
+              <Text sx={{ userSelect: "none" }} color={"gray.500"}>
+                Ошибка:{" "}
+              </Text>
+              {stderr}
+            </code>
+          </Box>
         </div>
       </Flex>
     </>

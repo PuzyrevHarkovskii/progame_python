@@ -14,12 +14,11 @@ import CodeSnippet from "@/components/CodeSnippets";
 export default function FirstSteps() {
   return (
     <div>
-      <Container maxW="container.lg">
+      <Container maxW="container.md">
         <Box p={5}>
           <Heading mb="0.5em" mt="1em" size="3xl" textAlign={"center"}>
             Сразу к делу!
           </Heading>
-
           <Text>
             Лучший способ понять, как работает то, что вы изучаете — это
             практика. И у нас уже все готово для того, чтобы вы попрактиковались
@@ -36,8 +35,8 @@ export default function FirstSteps() {
             программы, которая выводит на экран фразу «Привет, мир!». Мы будем
             придерживаться этой традиции.
           </Text>
-        </Box>
-        <Heading mb="0.5em" mt="1em" size="xl" textAlign={"center"}>
+        
+        <Heading mb="0.5em" mt="1em" size="xl" textAlign={"left"}>
           Редактор кода
         </Heading>
         <Text>Наберите следующий текст в редакторе ниже. </Text>
@@ -52,23 +51,23 @@ export default function FirstSteps() {
             Кавычки должны быть такими же, как в примере. Кавычки-елочки «» или
             кавычки-лапки “” вызовут ошибку;
           </ListItem>
-          <Heading mb="0.5em" mt="1em" size="xl" textAlign={"center"}>
+          </UnorderedList>
+          <Heading mb="0.5em" mt="1em" size="xl" textAlign={"left"}>
             Запуск программы
           </Heading>
           <Text>
             Нажмите на кнопку, чтобы запустить программу. Внизу, в поле
             результатов, вы увидите текст:
           </Text>
-        </UnorderedList>
         <Code>Привет, мир!</Code>
-        <Text>
+        <Text mb={5}>
           Если все так и есть, поздравляю! Вы только что написали свою первую
           программу на Python!
         </Text>
         <PythonProvider>
           <Codeblock3 />
         </PythonProvider>
-        <Heading mb="0.5em" mt="1em" size="xl" textAlign={"center"}>
+        <Heading mb="0.5em" mt="1em" size="xl" textAlign={"left"}>
           Ошибки
         </Heading>
         <Text>
@@ -78,7 +77,7 @@ export default function FirstSteps() {
           Эти правила называются синтаксисом и если нарушить их, программа не
           заработает.
         </Text>
-        <Heading mb="0.5em" mt="1em" size="xl" textAlign={"center"}>
+        <Heading mb="0.5em" mt="1em" size="xl" textAlign={"left"}>
           Коротко о{" "}
           <Text as="span" color="blue.500">
             Python
@@ -112,6 +111,7 @@ export default function FirstSteps() {
           встроен в Pyteezy, и вы можете запускать программы без установки
           дополнительного программного обеспечения.
         </Text>
+        </Box>
       </Container>
     </div>
   );
