@@ -5,8 +5,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "@/components/ui/Footer";
 import "./globals.css";
-import { GeistProvider, CssBaseline } from '@geist-ui/core'
-
+import { GeistProvider, CssBaseline } from "@geist-ui/core";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,13 +23,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ChakraProvider>
-        <Navbar/>
-        <ProgressBar/>
-       
-        {children}
-    
-          <Footer/>
-          </ChakraProvider></body>
+          <Navbar />
+          <ProgressBar />
+
+          {children}
+
+          <Footer />
+        </ChakraProvider>
+      </body>
     </html>
   );
 }
