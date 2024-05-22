@@ -31,9 +31,11 @@ export default function RootLayout({
           
           <Navbar />
           <ProgressBar />
-          
+          <main>
+            <PythonProvider>
           {children}
-          
+          </PythonProvider>
+          </main>
           <Footer />
         </ChakraProvider>
       </body>
