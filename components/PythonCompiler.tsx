@@ -77,7 +77,7 @@ function PythonCompiler() {
                 extensions={[python()]}
                 onChange={handleEditorChange}
                 theme={dracula}
-                style={{ fontSize: "1.4em" }}
+                style={{ fontSize: "1.2em" }}
                 placeholder="Здесь можно писать и запускать код!"
               />
             </div>

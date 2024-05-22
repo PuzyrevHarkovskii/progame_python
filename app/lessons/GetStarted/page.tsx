@@ -12,6 +12,7 @@ export default function FirstSteps() {
     <div>
       <Container maxW="container.md">
         <Box p={5}>
+        <PythonProvider>
           <Heading mb="0.5em" mt="1em" size="3xl" textAlign={"center"}>
             Сразу к делу!
           </Heading>
@@ -56,9 +57,9 @@ export default function FirstSteps() {
               или кавычки-лапки <Code>“”</Code> вызовут ошибку;
             </ListItem>
           </UnorderedList>
-          <PythonProvider>
+          
             <PythonCompiler />
-          </PythonProvider>
+          
           <Heading mb="0.5em" mt="1em" size="xl" textAlign={"left"}>
             Запуск программы
           </Heading>
@@ -117,9 +118,9 @@ export default function FirstSteps() {
             Изучите сообщение об ошибке.
           </Text>
 
-          <PythonProvider>
+          
             <PythonCompiler />
-          </PythonProvider>
+         
 
           <Heading mb="0.5em" mt="1em" size="xl" textAlign={"left"}>
             Коротко о{" "}
@@ -160,7 +161,7 @@ export default function FirstSteps() {
             встроен в Pyteezy, и вы можете запускать программы без установки
             дополнительного программного обеспечения.
           </Text>
-         
+          </PythonProvider>
         </Box>
       </Container>
     </div>

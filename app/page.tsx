@@ -35,46 +35,57 @@ export default function Home() {
     <>
       <Container maxW="container.md">
         <Box p={5}>
-          <Heading mb="0.5em" mt="1em" size="xl" textAlign={"left"}>
+          <Heading mb="0.5em" mt="1em" size="3xl" textAlign={"left"}>
             Учебник Python
           </Heading>
           <OrderedList>
-            <ListItem>
-              <Link target="_blank" href="/lessons/GetStarted">
-                Начало
+            <ListItem as="h3" fontSize="xl">
+              <Link href="/lessons/GetStarted">
+                <Heading size="xl">1. Начало</Heading>
               </Link>
             </ListItem>
-            <ListItem>
-              {" "}
-              Переменные
+            <ListItem as="h3" fontSize="xl">
+              <Link href="/lessons/Variables-Start">
+                {" "}
+                <Heading size="xl">2. Переменные</Heading>
+              </Link>
               <UnorderedList>
-                <ListItem>
-                  <Link target="_blank" href="/lessons/Variables-Start">
-                    Что такое переменная?
+                <ListItem fontSize="lg">
+                  <Link href="/lessons/Variables-Start">
+                    <Heading size="md" pl="10">
+                      Что такое переменная?
+                    </Heading>
                   </Link>
                 </ListItem>
-                <ListItem>
-                  <Link target="_blank" href="/lessons/Variables-Operations">
-                    Операции над переменными
+                <ListItem fontSize="lg">
+                  <Link href="/lessons/Variables-Operations">
+                    <Heading size="md" pl="10">
+                      {" "}
+                      Операции над переменными
+                    </Heading>
                   </Link>
                 </ListItem>
-                <ListItem>
-                  <Link target="_blank" href="/lessons/PEP8">
-                    Что такое PEP8?
+                <ListItem fontSize="lg">
+                  <Link href="/lessons/PEP8">
+                    <Heading size="md" pl="10">
+                      Что такое PEP8?
+                    </Heading>
                   </Link>
                 </ListItem>
               </UnorderedList>
-              <ListItem>Строки</ListItem>
             </ListItem>
-            <ListItem></ListItem>
-            <ListItem></ListItem>
-            <ListItem></ListItem>
+            <ListItem as="h3" fontSize="xl">
+              <Heading size="xl">3. Строки</Heading>
+            </ListItem>
+            <ListItem as="h3" fontSize="xl"></ListItem>
+            <ListItem as="h3" fontSize="xl"></ListItem>
+            <ListItem as="h3" fontSize="xl"></ListItem>
           </OrderedList>
           <NavigationButtons
             leftButtonLink="/lessons/Variables-Start"
             rightButtonLink="/lessons/Variables-Operations"
           />
-        <ColorModeToggle/>
+          <ColorModeToggle />
         </Box>
       </Container>
     </>
