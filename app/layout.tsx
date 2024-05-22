@@ -9,6 +9,7 @@ import "./globals.css";
 import { GeistProvider, CssBaseline } from "@geist-ui/core";
 import { Global } from "@emotion/react";
 import Header from "@/components/Header";
+import { PythonProvider } from "react-py";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,9 +31,9 @@ export default function RootLayout({
           
           <Navbar />
           <ProgressBar />
-
+          <PythonProvider>
           {children}
-
+          </PythonProvider>
           <Footer />
         </ChakraProvider>
       </body>

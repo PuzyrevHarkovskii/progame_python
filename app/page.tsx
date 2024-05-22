@@ -77,9 +77,6 @@ export default function Home() {
             <ListItem as="h3" fontSize="xl">
               <Heading size="xl">3. Строки</Heading>
             </ListItem>
-            <ListItem as="h3" fontSize="xl"></ListItem>
-            <ListItem as="h3" fontSize="xl"></ListItem>
-            <ListItem as="h3" fontSize="xl"></ListItem>
           </OrderedList>
           <NavigationButtons
             leftButtonLink="/lessons/Variables-Start"
