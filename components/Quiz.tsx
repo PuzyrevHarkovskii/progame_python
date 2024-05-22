@@ -29,13 +29,13 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswers }) => {
 
   return (
     <Box textAlign="center" py={10}>
-      <Heading mb="0.5em" size="md" textAlign="center">
+      <Heading mb="0.5em" size="md" textAlign="left">
         {question}
       </Heading>
-      <Text pb={4} align="center">
+      <Text pb={4} align="left">
       Выберите все правильные варианты.
           </Text>
-      <Stack spacing={5} direction="column" align="center">
+      <Stack spacing={5} direction="column" align="left">
         {options.map((option) => (
           <Checkbox
             key={option}

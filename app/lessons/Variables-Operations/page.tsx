@@ -2,9 +2,10 @@
 import { Container, Box, Heading, Text, Code } from "@chakra-ui/react";
 import { PythonProvider } from "react-py";
 import { CheckCircleIcon } from "@chakra-ui/icons";
-import { List, ListItem, UnorderedList, Image } from "@chakra-ui/react";
+import { ListItem, UnorderedList, Image } from "@chakra-ui/react";
 import PythonCompiler from "@/components/PythonCompiler";
 import CodeFragment from "@/components/CodeFragment";
+import PythonCompiler2 from "@/components/PythonCompiler2";
 
 export default function Operations() {
   return (
@@ -114,7 +115,7 @@ print(a)`}
           </Text>
           <PythonProvider>
             <PythonCompiler />
-          </PythonProvider>
+          
           <Heading mb="0.5em" mt="1em" size="xl" textAlign={"left"}>
             Сложение и вычитание
           </Heading>
@@ -181,9 +182,11 @@ print(c)`}
             Если вы что‑то забыли, можно вернуться к предыдущим урокам и найти
             там нужную информацию.
           </Text>
-          <PythonProvider>
-            <PythonCompiler />
-          </PythonProvider>
+          <main>
+            
+              <PythonCompiler />
+            
+          </main>
           <Heading mb="0.5em" mt="1em" size="xl" textAlign={"left"}>
             Умножение и деление
           </Heading>
@@ -272,9 +275,10 @@ e = 2.7182`}
               Переменные a, b и c выведены на экран одной строкой
             </ListItem>
           </UnorderedList>
-          <PythonProvider>
+          
             <PythonCompiler />
           </PythonProvider>
+          
         </Box>
       </Container>
     </div>

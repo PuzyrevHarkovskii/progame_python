@@ -14,6 +14,7 @@ import "./globals.css";
 import Quiz from "@/components/Quiz";
 import CodeFragment from "../components/CodeFragment";
 import NavigationButtons from "@/components/ui/NavigationButtons";
+import ColorModeToggle from "@/components/ui/darkTheme";
 
 export default function Home() {
   useEffect(() => {
@@ -73,6 +74,7 @@ export default function Home() {
             leftButtonLink="/lessons/Variables-Start"
             rightButtonLink="/lessons/Variables-Operations"
           />
+        <ColorModeToggle/>
         </Box>
       </Container>
     </>

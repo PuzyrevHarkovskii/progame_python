@@ -18,7 +18,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-function PythonCompiler() {
+function PythonCompiler2() {
   const [input, setInput] = useState("");
   const startState = EditorState.create({
     doc: 'Hello World',
@@ -28,7 +28,7 @@ function PythonCompiler() {
   
   useEffect(() => {
     navigator.serviceWorker
-      .register("/react-py-sw.js")
+      .register("/react-py-sw_copy.js")
       .then((registration) =>
         console.log(
           "Service Worker registration прошла успешно: ",
@@ -168,4 +168,4 @@ function PythonCompiler() {
   );
 }
 
-export default PythonCompiler;
+export default PythonCompiler2;
