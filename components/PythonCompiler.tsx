@@ -2,14 +2,10 @@
 import { useState, useEffect, useCallback } from "react";
 import { usePython } from "react-py";
 import CodeMirror from "@uiw/react-codemirror";
-import { placeholder } from "@uiw/react-codemirror";
 import { python } from "@codemirror/lang-python";
 import { dracula } from "@uiw/codemirror-theme-dracula";
 import { FaPlay } from "react-icons/fa";
-import { EditorState } from "@uiw/react-codemirror";
-import { EditorView } from "@uiw/react-codemirror";
 import { Container, Box, Heading, Text, Code } from "@chakra-ui/react";
-import { basicSetup } from "@uiw/react-codemirror";
 import {
   Flex,
   Button,
@@ -20,12 +16,18 @@ import {
 
 function PythonCompiler() {
   const [input, setInput] = useState("");
-  const startState = EditorState.create({
-    doc: 'Hello World',
-    extensions: [placeholder('placeholder text')]
-  })  
-  
-  
+  const {
+    runPython,
+    stdout,
+    stderr,
+    isLoading,
+    isReady,
+    isRunning,
+    interruptExecution,
+    isAwaitingInput,
+    sendInput,
+  } = usePython();
+
   useEffect(() => {
     navigator.serviceWorker
       .register("/react-py-sw.js")
@@ -40,22 +42,24 @@ function PythonCompiler() {
       );
   }, []);
 
-  // Use the usePython hook to run code and access both stdout and stderr
-  const {
-    runPython,
-    stdout,
-    stderr,
-    isLoading,
-    isRunning,
-    interruptExecution,
-    isAwaitingInput,
-    sendInput,
-  } = usePython();
+  // Функция для установки pyodide-http
+  const ensurePyodideHttp = async () => {
+    if (isReady) {
+      try {
+        await runPython(`
+          import micropip
+          await micropip.install("pyodide-http")
+        `);
+        console.log("pyodide-http loaded successfully");
+      } catch (error) {
+        console.error("Error loading pyodide-http:", error);
+      }
+    }
+  };
 
-  
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    await ensurePyodideHttp(); // Установка пакета перед выполнением кода
     runPython(input);
   };
 
@@ -69,8 +73,8 @@ function PythonCompiler() {
       <Flex justify="center" pt={5} pb={1}>
         <div className="relative color-red mb-10 flex flex-col">
           <form onSubmit={handleSubmit}>
-            <div  className="p-4 sm:w-full md:min-w-[43em] bg-gray-800 rounded-md shadow-lg shadow-gray-700/50 width-100%">
-              <CodeMirror 
+            <div className="p-4 sm:w-full md:min-w-[43em] bg-gray-800 rounded-md shadow-lg shadow-gray-700/50 width-100%">
+              <CodeMirror
                 value={input}
                 height="100%"
                 width="100%"
