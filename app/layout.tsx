@@ -12,6 +12,7 @@ import Header from "@/components/Header";
 import { PythonProvider } from "react-py";
 
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

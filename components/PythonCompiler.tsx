@@ -33,16 +33,16 @@ function PythonCompiler() {
       .register("/react-py-sw.js")
       .then((registration) =>
         console.log(
-          "Service Worker registration прошла успешно: ",
+          "Service Worker registration прошла успешно :)   : ",
           registration.scope
         )
       )
       .catch((err) =>
-        console.log("Service Worker registration не удалась: ", err)
+        console.log("Service Worker registration не удалась :(    ): ", err)
       );
   }, []);
 
-  // Функция для установки pyodide-http
+
   const ensurePyodideHttp = async () => {
     if (isReady) {
       try {
@@ -132,13 +132,13 @@ function PythonCompiler() {
 
           <Box
             as="pre"
-            bg="rgba(0, 0, 0, 0.05)" // Полупрозрачный фон
+            bg="rgba(0, 0, 0, 0.05)" 
             p="1em"
             mb={"0.5em"}
             borderRadius="xl"
             border="1px solid"
             borderColor="gray.200"
-            whiteSpace="pre-wrap" // Для отображения длинных строк
+            whiteSpace="pre-wrap" 
             overflowX="auto"
           >
             <code>
@@ -150,12 +150,12 @@ function PythonCompiler() {
           </Box>
           <Box
             as="pre"
-            bg="rgba(0, 0, 0, 0.05)" // Полупрозрачный фон
+            bg="rgba(0, 0, 0, 0.05)" 
             p="1em"
             borderRadius="xl"
             border="1px solid"
             borderColor="gray.200"
-            whiteSpace="pre-wrap" // Для отображения длинных строк
+            whiteSpace="pre-wrap" 
             overflowX="auto"
             color="red.500"
           >

@@ -1,5 +1,5 @@
-import { Flex, IconButton, Link } from "@chakra-ui/react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
+import { Flex, IconButton, Link, Text } from "@chakra-ui/react";
+import { ArrowBackIcon, ArrowRightIcon } from "@chakra-ui/icons";
 
 interface NavigationButtonsProps {
   leftButtonLink: string;
@@ -14,16 +14,12 @@ const NavigationButtons: React.FC<NavigationButtonsProps> = ({
     <Link href={leftButtonLink}>
       <IconButton
         aria-label="Navigate Left"
-        icon={<ArrowLeftIcon />}
+        icon={<ArrowBackIcon boxSize={6} />}
         variant="ghost"
       />
     </Link>
     <Link href={rightButtonLink}>
-      <IconButton
-        aria-label="Navigate Right"
-        icon={<ArrowRightIcon />}
-        variant="ghost"
-      />
+      <Text size={'lg'}>ДАЛЬШЕ</Text>
     </Link>
   </Flex>
 );
