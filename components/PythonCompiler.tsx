@@ -97,7 +97,7 @@ function PythonCompiler() {
   `}
             />
           </form>
-
+          {isLoading ? <p>Loading...</p> : <p>Ready!</p>}
           {isAwaitingInput && (
             <form
               onSubmit={(e) => {
@@ -112,6 +112,7 @@ function PythonCompiler() {
                 }
               }}
             >
+              
               <Input
                 name="input"
                 type="text"
