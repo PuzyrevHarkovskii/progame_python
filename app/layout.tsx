@@ -10,6 +10,7 @@ import { GeistProvider, CssBaseline } from "@geist-ui/core";
 import { Global } from "@emotion/react";
 import Header from "@/components/Header";
 import { PythonProvider } from "react-py";
+import BackToTopButton from "@/components/BackToTopButton";
 
 
 
@@ -37,6 +38,7 @@ export default function RootLayout({
           {children}
           
           </main>
+          <BackToTopButton/>
           <Footer />
         </ChakraProvider>
       </body>

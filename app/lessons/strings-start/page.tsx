@@ -26,11 +26,11 @@ import {
 import Quiz from "@/components/Quiz";
 import NavigationButtons from "@/components/ui/NavigationButtons";
 
-const options = ["'строка №1'", '"строка №2"', "'строка №3'", 'строка №4"'];
+const options = ["'строка №1", '"строка №2"', "'строка №3'", 'строка №4"'];
 const correctAnswers = ['"строка №2"', "'строка №3'"];
 const question = "Какие строки верные с точки зрения Питона?";
 
-export default function Variebles() {
+export default function Variables() {
   return (
     <div>
       <Container maxW="container.md">
