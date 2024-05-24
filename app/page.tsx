@@ -38,25 +38,25 @@ export default function Home() {
           </Heading>
           <OrderedList>
             <ListItem as="h3" fontSize="xl">
-              <Link href="/lessons/GetStarted">
+              <Link href="/lessons/get-started">
                 <Heading size="xl">1. Начало</Heading>
               </Link>
             </ListItem>
             <ListItem as="h3" fontSize="xl">
-              <Link href="/lessons/Variables-Start">
+              <Link href="/lessons/variables-start">
                 {" "}
                 <Heading size="xl">2. Переменные</Heading>
               </Link>
               <UnorderedList>
                 <ListItem fontSize="lg">
-                  <Link href="/lessons/Variables-Start">
+                  <Link href="/lessons/variables-start">
                     <Heading size="md" pl="10">
-                      Что такое переменная?
+                      Что такое переменная
                     </Heading>
                   </Link>
                 </ListItem>
                 <ListItem fontSize="lg">
-                  <Link href="/lessons/Variables-Operations">
+                  <Link href="/lessons/variables-operations">
                     <Heading size="md" pl="10">
                       {" "}
                       Операции над переменными
@@ -74,11 +74,20 @@ export default function Home() {
             </ListItem>
             <ListItem as="h3" fontSize="xl">
               <Heading size="xl">3. Строки</Heading>
+              <UnorderedList>
+                <ListItem fontSize="lg">
+                  <Link href="/lessons/strings-start">
+                    <Heading size="md" pl="10">
+                      Что такое строки
+                    </Heading>
+                  </Link>
+                </ListItem>
+                </UnorderedList>
             </ListItem>
           </OrderedList>
           <NavigationButtons
-            leftButtonLink="/lessons/Variables-Start"
-            rightButtonLink="/lessons/Variables-Operations"
+            leftButtonLink="/lessons/variables-start"
+            rightButtonLink="/lessons/variables-operations"
           />
           <ColorModeToggle />
         </Box>

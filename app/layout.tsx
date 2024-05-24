@@ -38,7 +38,7 @@ export default function RootLayout({
           {children}
           
           </main>
-          <BackToTopButton/>
+          {/* <BackToTopButton/> */}
           <Footer />
         </ChakraProvider>
       </body>
