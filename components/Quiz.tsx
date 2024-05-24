@@ -28,7 +28,15 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswers }) => {
   };
 
   return (
-    <Box textAlign="center" py={10}>
+    <Box 
+      textAlign="center" 
+      py={5}
+      px={5}
+      border="3px" 
+      borderColor="gray.400" 
+      borderRadius="md" 
+      borderStyle="dashed"
+    >
       <Heading mb="0.5em" size="md" textAlign="left">
         {question}
       </Heading>

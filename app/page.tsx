@@ -59,7 +59,7 @@ export default function Home() {
                   </Link>
                 </ListItem>
                 <ListItem fontSize="lg">
-                  <Link href="/lessons/pep8">
+                  <Link href="/lessons/PEP8">
                     <Heading size="md" pl="10">
                       Что такое PEP8?
                     </Heading>
@@ -76,6 +76,13 @@ export default function Home() {
                   <Link href="/lessons/strings-start">
                     <Heading size="md" pl="10">
                       Что такое строки
+                    </Heading>
+                  </Link>
+                </ListItem>
+                <ListItem fontSize="lg">
+                  <Link href="/lessons/strings-conc">
+                    <Heading size="md" pl="10">
+                      Переносы, специальные символы, конкатенация
                     </Heading>
                   </Link>
                 </ListItem>

@@ -10,7 +10,7 @@ const NavigationButtons: React.FC<NavigationButtonsProps> = ({
   leftButtonLink,
   rightButtonLink
 }) => (
-  <Flex justifyContent="space-between" alignItems="center" p={4}>
+  <Flex justifyContent="space-between" alignItems="center" pt={10} pb={2}>
     <Link href={leftButtonLink}>
       <IconButton
         aria-label="Navigate Left"

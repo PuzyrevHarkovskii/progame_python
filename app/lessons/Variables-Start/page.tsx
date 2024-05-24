@@ -23,6 +23,7 @@ import {
 } from "@chakra-ui/react";
 
 import Quiz from "@/components/Quiz";
+import Header from "@/components/Header";
 
 const options = ["test", "3foo", "my_name"];
 const correctAnswers = ["test", "my_name"];
@@ -170,7 +171,11 @@ export default function Variebles() {
             легко поймете, что назвали переменную некорректно и сможете
             исправить это.
           </Text>
-          <Quiz question={question} options={options} correctAnswers={correctAnswers} />
+          <Quiz
+            question={question}
+            options={options}
+            correctAnswers={correctAnswers}
+          />
         </Box>
       </Container>
     </div>

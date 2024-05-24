@@ -1,9 +1,5 @@
 "use client";
 import { Container, Box, Heading, Text, Code } from "@chakra-ui/react";
-import { PythonProvider } from "react-py";
-import { CheckCircleIcon } from "@chakra-ui/icons";
-import { List, ListItem, UnorderedList, Image } from "@chakra-ui/react";
-import PythonCompiler from "@/components/PythonCompiler";
 import CodeFragment from "@/components/CodeFragment";
 
 export default function PEP8() {

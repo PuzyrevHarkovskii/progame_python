@@ -31,6 +31,7 @@ const MainTheme = extendTheme({
     Text: {
       baseStyle: {
         py: 2,
+        
       },
     },
   },
