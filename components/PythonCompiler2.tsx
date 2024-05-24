@@ -5,11 +5,11 @@ import CodeMirror from "@uiw/react-codemirror";
 import { placeholder } from "@uiw/react-codemirror";
 import { python } from "@codemirror/lang-python";
 import { dracula } from "@uiw/codemirror-theme-dracula";
-import { FaPlay } from "react-icons/fa";
+
 import { EditorState } from "@uiw/react-codemirror";
-import { EditorView } from "@uiw/react-codemirror";
-import { Container, Box, Heading, Text, Code } from "@chakra-ui/react";
-import { basicSetup } from "@uiw/react-codemirror";
+
+import { Box, Text } from "@chakra-ui/react";
+
 import {
   Flex,
   Button,
@@ -21,11 +21,10 @@ import {
 function PythonCompiler2() {
   const [input, setInput] = useState("");
   const startState = EditorState.create({
-    doc: 'Hello World',
-    extensions: [placeholder('placeholder text')]
-  })  
-  
-  
+    doc: "Hello World",
+    extensions: [placeholder("placeholder text")],
+  });
+
   useEffect(() => {
     navigator.serviceWorker
       .register("/react-py-sw_copy.js")
@@ -52,8 +51,6 @@ function PythonCompiler2() {
     sendInput,
   } = usePython();
 
-  
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     runPython(input);
@@ -69,8 +66,8 @@ function PythonCompiler2() {
       <Flex justify="center" pt={5} pb={1}>
         <div className="relative color-red mb-10 flex flex-col">
           <form onSubmit={handleSubmit}>
-            <div  className="p-4 sm:w-full md:min-w-[43em] bg-gray-800 rounded-md shadow-lg shadow-gray-700/50 width-100%">
-              <CodeMirror 
+            <div className="p-4 sm:w-full md:min-w-[43em] bg-gray-800 rounded-md shadow-lg shadow-gray-700/50 width-100%">
+              <CodeMirror
                 value={input}
                 height="100%"
                 width="100%"

@@ -4,8 +4,7 @@ import { usePython } from "react-py";
 import CodeMirror from "@uiw/react-codemirror";
 import { python } from "@codemirror/lang-python";
 import { dracula } from "@uiw/codemirror-theme-dracula";
-import { FaPlay } from "react-icons/fa";
-import { Container, Box, Heading, Text, Code } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import {
   Flex,
   Button,
@@ -42,24 +41,23 @@ function PythonCompiler() {
       );
   }, []);
 
-
-  const ensurePyodideHttp = async () => {
-    if (isReady) {
-      try {
-        await runPython(`
-          import micropip
-          await micropip.install("pyodide-http")
-        `);
-        console.log("pyodide-http loaded successfully");
-      } catch (error) {
-        console.error("Error loading pyodide-http:", error);
-      }
-    }
-  };
+  // const ensurePyodideHttp = async () => {
+  //   if (isReady) {
+  //     try {
+  //       await runPython(`
+  //         import micropip
+  //         await micropip.install("pyodide-http")
+  //       `);
+  //       console.log("pyodide-http loaded successfully");
+  //     } catch (error) {
+  //       console.error("Error loading pyodide-http:", error);
+  //     }
+  //   }
+  // };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await ensurePyodideHttp(); // Установка пакета перед выполнением кода
+    // await ensurePyodideHttp(); // Установка пакета перед выполнением кода
     runPython(input);
   };
 
@@ -132,13 +130,13 @@ function PythonCompiler() {
 
           <Box
             as="pre"
-            bg="rgba(0, 0, 0, 0.05)" 
+            bg="rgba(0, 0, 0, 0.05)"
             p="1em"
             mb={"0.5em"}
             borderRadius="xl"
             border="1px solid"
             borderColor="gray.200"
-            whiteSpace="pre-wrap" 
+            whiteSpace="pre-wrap"
             overflowX="auto"
           >
             <code>
@@ -150,12 +148,12 @@ function PythonCompiler() {
           </Box>
           <Box
             as="pre"
-            bg="rgba(0, 0, 0, 0.05)" 
+            bg="rgba(0, 0, 0, 0.05)"
             p="1em"
             borderRadius="xl"
             border="1px solid"
             borderColor="gray.200"
-            whiteSpace="pre-wrap" 
+            whiteSpace="pre-wrap"
             overflowX="auto"
             color="red.500"
           >

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 
 import {
@@ -13,12 +13,13 @@ import {
   VStack,
   IconButton,
   CloseButton,
+  DarkMode,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
+import ColorModeToggle from "./darkTheme";
 // import { Logo } from "@choc-ui/logo";
 
-
-export default function Navbar(){
+export default function Navbar() {
   const bg = useColorModeValue("white", "gray.800");
   const mobileNav = useDisclosure();
 
@@ -93,7 +94,7 @@ export default function Navbar(){
                   aria-label="Close menu"
                   onClick={mobileNav.onClose}
                 />
-
+                <ColorModeToggle />
                 <Button w="full" variant="ghost">
                   Features
                 </Button>
@@ -116,4 +117,4 @@ export default function Navbar(){
       </chakra.header>
     </React.Fragment>
   );
-};
+}

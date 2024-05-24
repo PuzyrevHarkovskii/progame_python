@@ -51,7 +51,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswers }) => {
         Проверить
       </Button>
       {result && (
-        <Text mt={5} fontSize="lg" color={result === 'Правильно! 👏😎' ? 'green.500' : 'red.500'}>
+        <Text mt={5} fontSize="xl" color={result === 'Правильно! 👏😎' ? 'green.500' : 'red.500'}>
           {result}
         </Text>
       )}
