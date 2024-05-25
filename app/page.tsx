@@ -45,7 +45,7 @@ export default function Home() {
               </Link>
               <UnorderedList>
                 <ListItem fontSize="lg">
-                  <Link href="/lessons/variables-start">
+                  <Link href="/lessons/variables_start">
                     <Heading size="md" pl="10">
                       Что такое переменная
                     </Heading>

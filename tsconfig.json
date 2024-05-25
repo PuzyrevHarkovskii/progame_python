@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/CodeEditor.tsx", "components/PythonCell-2.tsx", "app/lessons/variables-start/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/CodeEditor.tsx", "components/PythonCell-2.tsx", "app/lessons/variables_start/page.jsx"],
   "exclude": ["node_modules"]
 }
