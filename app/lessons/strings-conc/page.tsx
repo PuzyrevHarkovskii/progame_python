@@ -36,7 +36,9 @@ export default function StringsConc() {
       <Container maxW="container.md">
         <Box p={5}>
           <ChakraProvider theme={MainTheme}>
+            
             <Heading>Алгоритм и обмен значений двух переменных</Heading>
+            <PythonProvider>
             <Text>
               В этом уроке нужно написать программу, которая обменивает две
               переменные значениями.
@@ -96,7 +98,7 @@ b = a`}
               и тоже значение.
             </Text>
             <PythonCompiler />
-
+            </PythonProvider>
             <Heading>Специальные символы</Heading>
             <Text>
               Бывает так, что в самой строке должна быть кавычка. Но Питон
@@ -243,7 +245,9 @@ print(a)`}
                 отобразились в поле «Результат» при выводе на экран.
               </Text>
             </Box>
+            <PythonProvider>
             <PythonCompiler />
+            </PythonProvider>
            
             <Heading>Конкатенация строк</Heading>
             <Text>Страшное слово «конкатенация» означает всего лишь склеивание нескольких строк в одну с помощью оператора +. То есть для чисел оператор + — это сложение. А для строк — это конкатенация.</Text>
@@ -273,6 +277,7 @@ print(c)`}
               borderRadius="md"
               borderLeftColor="blue.300"
               borderLeftWidth="6px"
+              bgColor={'blue.50'}
             >
               <Text>
               Для написания программы из этого урока вы можете создать новый файл, либо очистить файл с программой из предыдущего урока. Главное, чтобы в файле был только тот исходный код, который относится к текущей задаче.
@@ -284,12 +289,13 @@ print(c)`}
              <ListItem>Выведите значение переменной greeting на экран.</ListItem>
              </UnorderedList>
             </Box>
+            <PythonProvider>
             <PythonCompiler />
-
+            </PythonProvider>
             
           <NavigationButtons
               leftButtonLink="/lessons/strings-start"
-              rightButtonLink="/lessons/Variables-Operations"
+              rightButtonLink="/lessons/strings-Operations"
             />
         </Box>
       </Container>
