@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Euclid';
+  src: url('/fonts/EuclidCircularARegular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid';
+  src: url('/fonts/Euclid Circular A Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Euclid';
+  src: url('/fonts/Euclid Circular A SemiBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
