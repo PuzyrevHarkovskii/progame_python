@@ -57,7 +57,6 @@ const MainTheme = extendTheme({
       baseStyle: {
         py: 2,
         fontFamily: "Euclid Circular A",
-        
         fontSize: 'xl',
       },
     },

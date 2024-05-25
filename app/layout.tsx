@@ -9,6 +9,7 @@ import Nav from "@/components/ui/Nav";
 import MainTheme from "@/components/MainTheme";
 import LargeWithLogoLeft from "@/components/ui/Foter";
 import '../public/fonts.css';
+import { Global } from "@emotion/react";
 
 
 
@@ -30,7 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ChakraProvider>
-          
+       
           <Nav/>
           <ProgressBar />
           <main>
