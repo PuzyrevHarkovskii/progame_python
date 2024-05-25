@@ -40,7 +40,7 @@ export default function Home() {
               </Link>
             </ListItem>
             <ListItem as="h3" fontSize="xl">
-              <Link href="/lessons/variables-start">
+              <Link prefetch = {false} href="/lessons/variables-start">
                 <Heading size="xl">2. Переменные</Heading>
               </Link>
               <UnorderedList>
@@ -80,7 +80,7 @@ export default function Home() {
                   </Link>
                 </ListItem>
                 <ListItem fontSize="lg">
-                  <Link href="/lessons/strings-conc">
+                  <Link  href="/lessons/strings-conc">
                     <Heading size="md" pl="10">
                       Переносы, специальные символы, конкатенация
                     </Heading>
@@ -90,7 +90,7 @@ export default function Home() {
             </ListItem>
           </OrderedList>
           <NavigationButtons
-            leftButtonLink="/lessons/variables-start"
+            leftButtonLink="/lessons/variables-start" 
             rightButtonLink="/lessons/variables-operations"
           />
           <ColorModeToggle />

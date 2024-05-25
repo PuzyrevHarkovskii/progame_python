@@ -10,7 +10,7 @@ import { GeistProvider, CssBaseline } from "@geist-ui/core";
 import { Global } from "@emotion/react";
 import Header from "@/components/Header";
 import { PythonProvider } from "react-py";
-import BackToTopButton from "@/components/BackToTopButton";
+
 
 
 
@@ -18,7 +18,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Pyteezy",
-  description: "Учебник Python!",
+  description: "Учебник Python",
 };
 
 export default function RootLayout({
