@@ -34,10 +34,11 @@ export default function RootLayout({
           <Navbar />
           <ProgressBar />
           <main>
-           
+           <PythonProvider>
           {children}
-          
+          </PythonProvider>
           </main>
+          
           {/* <BackToTopButton/> */}
           <Footer />
         </ChakraProvider>
