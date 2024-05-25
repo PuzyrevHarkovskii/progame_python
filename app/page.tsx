@@ -35,12 +35,12 @@ export default function Home() {
           </Heading>
           <OrderedList>
             <ListItem as="h3" fontSize="xl">
-              <Link href="/lessons/get-started">
+              <Link href="/lessons/get_started">
                 <Heading size="xl">1. Начало</Heading>
               </Link>
             </ListItem>
             <ListItem as="h3" fontSize="xl">
-              <Link prefetch = {false} href="/lessons/variables-start">
+              <Link href="/lessons/variables_start">
                 <Heading size="xl">2. Переменные</Heading>
               </Link>
               <UnorderedList>
@@ -52,7 +52,7 @@ export default function Home() {
                   </Link>
                 </ListItem>
                 <ListItem fontSize="lg">
-                  <Link href="/lessons/variables-operations">
+                  <Link href="/lessons/variables_operations">
                     <Heading size="md" pl="10">
                       Операции над переменными
                     </Heading>
@@ -69,18 +69,18 @@ export default function Home() {
             </ListItem>
             <ListItem as="h3" fontSize="xl">
               <Heading size="xl">
-                <Link href="/lessons/strings-start">3. Строки</Link>
+                <Link href="/lessons/strings_start">3. Строки</Link>
               </Heading>
               <UnorderedList>
                 <ListItem fontSize="lg">
-                  <Link href="/lessons/strings-start">
+                  <Link href="/lessons/strings_start">
                     <Heading size="md" pl="10">
                       Что такое строки
                     </Heading>
                   </Link>
                 </ListItem>
                 <ListItem fontSize="lg">
-                  <Link  href="/lessons/strings-conc">
+                  <Link  href="/lessons/strings_conc">
                     <Heading size="md" pl="10">
                       Переносы, специальные символы, конкатенация
                     </Heading>
@@ -90,8 +90,8 @@ export default function Home() {
             </ListItem>
           </OrderedList>
           <NavigationButtons
-            leftButtonLink="/lessons/variables-start" 
-            rightButtonLink="/lessons/variables-operations"
+            leftButtonLink="/lessons/variables_start" 
+            rightButtonLink="/lessons/variables_operations"
           />
           <ColorModeToggle />
         </Box>
