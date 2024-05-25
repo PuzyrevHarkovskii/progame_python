@@ -49,7 +49,8 @@ const MainTheme = extendTheme({
         mb: "0.5em",
         textAlign: "left",
         size: "xl",
-        fontWeight: "bold",
+        fontWeight: "900",
+        fontFamily: "Euclid Circular A",
       },
     },
     Text: {
