@@ -80,7 +80,7 @@ export default function Home() {
                   </Link>
                 </ListItem>
                 <ListItem fontSize="lg">
-                  <Link  href="/lessons/strings_conc">
+                  <Link href="/lessons/strings_conc">
                     <Heading size="md" pl="10">
                       Переносы, специальные символы, конкатенация
                     </Heading>
@@ -88,12 +88,32 @@ export default function Home() {
                 </ListItem>
               </UnorderedList>
             </ListItem>
+            <Link href="/lessons/branching">
+              <Heading size="xl">4. Ветвление</Heading>
+            </Link>
+            <UnorderedList>
+              <ListItem>
+                <Link href="/lessons/branching"><Heading size="md" pl="10">
+                      Условные операторы if, else
+                    </Heading></Link>
+              </ListItem>
+              <ListItem>
+                <Link href="/lessons/branching"><Heading size="md" pl="10">
+                      Операторы elif, логика
+                    </Heading></Link>
+              </ListItem>
+              <ListItem>
+                <Link href="/lessons/branching"><Heading size="md" pl="10">
+                      Условные операторы if, else
+                    </Heading></Link>
+              </ListItem>
+            </UnorderedList>
           </OrderedList>
+
           <NavigationButtons
-            leftButtonLink="/lessons/variables_start" 
+            leftButtonLink="/lessons/variables_start"
             rightButtonLink="/lessons/variables_operations"
           />
-          <ColorModeToggle />
         </Box>
       </Container>
     </>

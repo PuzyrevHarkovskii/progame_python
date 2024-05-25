@@ -7,7 +7,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/ui/Nav";
 import MainTheme from "@/components/MainTheme";
-import LargeWithLogoLeft from "@/components/ui/Foter";
+import LargeWithLogoLeft from "@/components/ui/Footer";
 import '../public/fonts.css';
 import { Global } from "@emotion/react";
 

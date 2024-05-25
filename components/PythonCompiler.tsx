@@ -132,7 +132,7 @@ function PythonCompiler() {
           <Box
             as="pre"
             bg="rgba(0, 0, 0, 0.05)"
-            p="1em"
+            p="0.5em"
             mb={"0.5em"}
             borderRadius="xl"
             border="1px solid"
@@ -150,7 +150,7 @@ function PythonCompiler() {
           <Box
             as="pre"
             bg="rgba(0, 0, 0, 0.05)"
-            p="1em"
+            p="0.5em"
             borderRadius="xl"
             border="1px solid"
             borderColor="gray.200"

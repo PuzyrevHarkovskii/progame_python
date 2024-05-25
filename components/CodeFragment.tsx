@@ -10,7 +10,7 @@ interface CodeFragmentProps {
 
 const CodeFragment: React.FC<CodeFragmentProps> = ({ code, language, showLineNumbers }) => {
   return (
-    <Box borderRadius={"xl"} py={5} width="100%" style={{ fontFamily: 'monospace', fontSize: '1.2em' }}>
+    <Box borderRadius={"xl"} py={5} width="100%" style={{ fontFamily: 'monospace', fontSize: '1.3em' }}>
     <CopyBlock
       text={code}
       language={language}

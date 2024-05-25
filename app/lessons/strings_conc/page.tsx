@@ -345,8 +345,8 @@ TypeError: Can't convert int to str implicitely`}
             очень хочется или очень надо? Об этом в на следующей странице!
           </Text></ChakraProvider>
           <NavigationButtons
-            leftButtonLink="/lessons/strings-start"
-            rightButtonLink="/lessons/strings-Operations"
+            leftButtonLink="/lessons/strings_start"
+            rightButtonLink="/lessons/strings_num"
           />
         </Box>
       </Container>

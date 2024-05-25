@@ -57,3 +57,13 @@ code={`result = 55 + 125
 print("Результат=" + result)`}
 showLineNumbers={false}
 ></CodeFragment> */}
+
+{/* <Box
+py={3}
+px={3}
+border="1px solid"
+borderColor="gray.200"
+borderRadius="md"
+borderLeftColor="blue.300"
+borderLeftWidth="6px"
+> */}
