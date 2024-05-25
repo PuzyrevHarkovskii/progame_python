@@ -2,11 +2,24 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const MainTheme = extendTheme({
-  styles: {},
+  styles: {
+    global: {
+      // Добавляем глобальные стили, чтобы применить шрифты ко всему тексту
+      body: {
+        fontFamily: "YourCustomFont, system-ui, sans-serif",
+      },
+      heading: {
+        fontFamily: "YourCustomFont, system-ui, sans-serif",
+      },
+      mono: {
+        fontFamily: "YourMonoFont, Menlo, monospace",
+      },
+    },
+  },
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "system-ui, sans-serif",
-    mono: "Menlo, monospace",
+    body: "YourCustomFont, system-ui, sans-serif",
+    heading: "YourCustomFont, system-ui, sans-serif",
+    mono: "YourMonoFont, Menlo, monospace",
   },
   components: {
     Container: {
@@ -19,7 +32,6 @@ const MainTheme = extendTheme({
         p: "5",
       },
     },
-
     Heading: {
       baseStyle: {
         mt: "1em",
@@ -31,7 +43,7 @@ const MainTheme = extendTheme({
     Text: {
       baseStyle: {
         py: 2,
-        
+        // fontSize: 'lg',
       },
     },
   },

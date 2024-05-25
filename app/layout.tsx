@@ -6,10 +6,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "@/components/ui/Footer";
 import "./globals.css";
-import { GeistProvider, CssBaseline } from "@geist-ui/core";
-import { Global } from "@emotion/react";
-import Header from "@/components/Header";
-import { PythonProvider } from "react-py";
+
 
 
 
@@ -34,9 +31,9 @@ export default function RootLayout({
           <Navbar />
           <ProgressBar />
           <main>
-           <PythonProvider>
+           
           {children}
-          </PythonProvider>
+          
           </main>
           
           {/* <BackToTopButton/> */}
