@@ -245,9 +245,9 @@ print(a)`}
                 отобразились в поле «Результат» при выводе на экран.
               </Text>
             </Box>
-            <PythonProvider>
+            
             <PythonCompiler />
-            </PythonProvider>
+            
            
             <Heading>Конкатенация строк</Heading>
             <Text>Страшное слово «конкатенация» означает всего лишь склеивание нескольких строк в одну с помощью оператора +. То есть для чисел оператор + — это сложение. А для строк — это конкатенация.</Text>
@@ -289,9 +289,9 @@ print(c)`}
              <ListItem>Выведите значение переменной greeting на экран.</ListItem>
              </UnorderedList>
             </Box>
-            <PythonProvider>
+            
             <PythonCompiler />
-            </PythonProvider>
+            
             
           <NavigationButtons
               leftButtonLink="/lessons/strings-start"
