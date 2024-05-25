@@ -30,6 +30,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswers }) => {
   return (
     <Box 
       textAlign="center" 
+      my={5}
       py={5}
       px={5}
       border="3px" 

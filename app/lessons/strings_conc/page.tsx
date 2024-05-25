@@ -342,7 +342,7 @@ TypeError: Can't convert int to str implicitely`}
           </Text>
           <Text>
             Получается, что склеить строку и число нельзя. Но что делать, если
-            очень хочется или очень надо? Об этом в следующем уроке!
+            очень хочется или очень надо? Об этом в на следующей странице!
           </Text></ChakraProvider>
           <NavigationButtons
             leftButtonLink="/lessons/strings-start"

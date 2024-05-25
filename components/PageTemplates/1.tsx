@@ -36,7 +36,7 @@ export default function StringsConc() {
       <Container maxW="container.md">
         <Box p={5}>
           <ChakraProvider theme={MainTheme}>
-            <Heading></Heading>
+            <Heading size={'3xl'} textAlign={'center'}></Heading>
           </ChakraProvider>
           <NavigationButtons
             leftButtonLink="/lessons/PEP8"
@@ -47,3 +47,13 @@ export default function StringsConc() {
     </div>
   );
 }
+
+
+
+
+{/* <CodeFragment
+language="python"
+code={`result = 55 + 125
+print("Результат=" + result)`}
+showLineNumbers={false}
+></CodeFragment> */}

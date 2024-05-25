@@ -4,8 +4,11 @@ import Navbar from "@/components/ui/Navbar";
 import { ChakraProvider } from "@chakra-ui/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Footer from "@/components/ui/Footer";
 import "./globals.css";
+import Nav from "@/components/ui/Nav";
+import MainTheme from "@/components/MainTheme";
+import LargeWithLogoLeft from "@/components/ui/Foter";
+import '../public/fonts.css';
 
 
 
@@ -28,7 +31,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ChakraProvider>
           
-          <Navbar />
+          <Nav/>
           <ProgressBar />
           <main>
            
@@ -37,7 +40,7 @@ export default function RootLayout({
           </main>
           
           {/* <BackToTopButton/> */}
-          <Footer />
+          <LargeWithLogoLeft/>
         </ChakraProvider>
       </body>
     </html>
