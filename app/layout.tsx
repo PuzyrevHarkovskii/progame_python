@@ -10,6 +10,7 @@ import LargeWithLogoLeft from "@/components/ui/Footer";
 import "../public/fonts.css";
 import localfont from "next/font/local";
 import { Global } from "@emotion/react";
+import '../public/fonts.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
