@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.11.5",
     "@geist-ui/core": "^2.3.8",
     "@monaco-editor/react": "^4.6.0",
+    "@next/font": "^14.2.3",
     "@nextui-org/react": "^2.3.6",
     "@nextui-org/snippet": "^2.0.35",
     "@nextui-org/system": "^2.1.2",

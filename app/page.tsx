@@ -6,13 +6,17 @@ import {
   OrderedList,
   ListItem,
   UnorderedList,
+  ChakraProvider,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import Link from "next/link";
 import "./globals.css";
 import NavigationButtons from "@/components/ui/NavigationButtons";
 import ColorModeToggle from "@/components/ui/darkTheme";
-
+import { PythonProvider } from "react-py";
+import PythonCompiler from "@/components/PythonCompiler";
+import PythonCompiler2 from "@/components/PythonCompiler2";
+import MainTheme from "@/components/MainTheme";
 export default function Home() {
   useEffect(() => {
     navigator.serviceWorker
@@ -30,90 +34,76 @@ export default function Home() {
     <>
       <Container maxW="container.md">
         <Box p={5}>
+          <ChakraProvider theme={MainTheme}>
           <Heading mb="0.5em" mt="1em" size="3xl" textAlign={"left"}>
             Учебник Python
           </Heading>
-          <OrderedList>
-            <ListItem as="h3" fontSize="xl">
-              <Link href="/lessons/get_started">
-                <Heading size="xl">1. Начало</Heading>
-              </Link>
-            </ListItem>
-            <ListItem as="h3" fontSize="xl">
-              <Link href="/lessons/variables_start">
-                <Heading size="xl">2. Переменные</Heading>
-              </Link>
-              <UnorderedList>
-                <ListItem fontSize="lg">
-                  <Link href="/lessons/variables_start">
-                    <Heading size="md" pl="10">
-                      Что такое переменная
-                    </Heading>
-                  </Link>
-                </ListItem>
-                <ListItem fontSize="lg">
-                  <Link href="/lessons/variables_operations">
-                    <Heading size="md" pl="10">
-                      Операции над переменными
-                    </Heading>
-                  </Link>
-                </ListItem>
-                <ListItem fontSize="lg">
-                  <Link href="/lessons/PEP8">
-                    <Heading size="md" pl="10">
-                      Что такое PEP8?
-                    </Heading>
-                  </Link>
-                </ListItem>
-              </UnorderedList>
-            </ListItem>
-            <ListItem as="h3" fontSize="xl">
-              <Heading size="xl">
-                <Link href="/lessons/strings_start">3. Строки</Link>
-              </Heading>
-              <UnorderedList>
-                <ListItem fontSize="lg">
-                  <Link href="/lessons/strings_start">
-                    <Heading size="md" pl="10">
-                      Что такое строки
-                    </Heading>
-                  </Link>
-                </ListItem>
-                <ListItem fontSize="lg">
-                  <Link href="/lessons/strings_conc">
-                    <Heading size="md" pl="10">
-                      Переносы, специальные символы, конкатенация
-                    </Heading>
-                  </Link>
-                </ListItem>
-              </UnorderedList>
-            </ListItem>
-            <Link href="/lessons/branching">
-              <Heading size="xl">4. Ветвление</Heading>
-            </Link>
-            <UnorderedList>
-              <ListItem>
-                <Link href="/lessons/branching"><Heading size="md" pl="10">
-                      Условные операторы if, else
-                    </Heading></Link>
-              </ListItem>
-              <ListItem>
-                <Link href="/lessons/branching"><Heading size="md" pl="10">
-                      Операторы elif, логика
-                    </Heading></Link>
-              </ListItem>
-              <ListItem>
-                <Link href="/lessons/branching"><Heading size="md" pl="10">
-                      Условные операторы if, else
-                    </Heading></Link>
-              </ListItem>
-            </UnorderedList>
-          </OrderedList>
 
-          <NavigationButtons
-            leftButtonLink="/lessons/variables_start"
-            rightButtonLink="/lessons/variables_operations"
-          />
+          <Link href="/lessons/get_started">
+            <Heading size="xl">1. Начало</Heading>
+          </Link>
+
+          <Link href="/lessons/variables_start">
+            <Heading size="xl">2. Переменные</Heading>
+          </Link>
+
+          <Link href="/lessons/variables_start">
+            <Heading size="md" pl="10">
+              Что такое переменная
+            </Heading>
+          </Link>
+
+          <Link href="/lessons/variables_operations">
+            <Heading size="md" pl="10">
+              Операции над переменными
+            </Heading>
+          </Link>
+
+          <Link href="/lessons/PEP8">
+            <Heading size="md" pl="10">
+              Что такое PEP8?
+            </Heading>
+          </Link>
+
+          <Heading size="xl">
+            <Link href="/lessons/strings_start">3. Строки</Link>
+          </Heading>
+
+          <Link href="/lessons/strings_start">
+            <Heading size="md" pl="10">
+              Что такое строки
+            </Heading>
+          </Link>
+
+          <Link href="/lessons/strings_conc">
+            <Heading size="md" pl="10">
+              Переносы, специальные символы, конкатенация
+            </Heading>
+          </Link>
+
+          <Link href="/lessons/branching">
+            <Heading size="xl">4. Ветвление</Heading>
+          </Link>
+
+          <Link href="/lessons/branching">
+            <Heading size="md" pl="10">
+              Условные операторы if, else
+            </Heading>
+          </Link>
+
+          <Link href="/lessons/branching_elif">
+            <Heading size="md" pl="10">
+              Операторы elif, логические операторы
+            </Heading>
+          </Link>
+
+          <Link href="/lessons/branching">
+            <Heading size="md" pl="10">
+              Условные операторы if, else
+            </Heading>
+          </Link>
+
+          </ChakraProvider>
         </Box>
       </Container>
     </>

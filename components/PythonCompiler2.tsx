@@ -1,25 +1,22 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { usePython } from "react-py";
 import CodeMirror from "@uiw/react-codemirror";
 import { placeholder } from "@uiw/react-codemirror";
 import { python } from "@codemirror/lang-python";
 import { dracula } from "@uiw/codemirror-theme-dracula";
-
+import { Box, Text, Flex, Button, Input, VStack } from "@chakra-ui/react";
 import { EditorState } from "@uiw/react-codemirror";
 
-import { Box, Text } from "@chakra-ui/react";
-
-import {
-  Flex,
-  Button,
-  Input,
-  VStack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+interface InputProps {
+  prompt: string;
+  onSubmit: (value: string) => void;
+}
 
 function PythonCompiler2() {
   const [input, setInput] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+  
   const startState = EditorState.create({
     doc: "Hello World",
     extensions: [placeholder("placeholder text")],
@@ -37,9 +34,12 @@ function PythonCompiler2() {
       .catch((err) =>
         console.log("Service Worker registration не удалась: ", err)
       );
+
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
   }, []);
 
-  // Use the usePython hook to run code and access both stdout and stderr
   const {
     runPython,
     stdout,
@@ -60,6 +60,11 @@ function PythonCompiler2() {
     console.log("val:", val);
     setInput(val);
   }, []);
+
+  const handleInputSubmit = (value: string) => {
+    setInput(value);
+    runPython(value);
+  };
 
   return (
     <>
@@ -159,6 +164,39 @@ function PythonCompiler2() {
               {stderr}
             </code>
           </Box>
+        </div>
+      </Flex>
+
+      <Flex justify="center" pt={5} pb={1}>
+        <div className="mt-4 lg:w-1/2">
+          <label
+            htmlFor="input"
+            className="block text-sm font-medium text-gray-700 dark:text-gray-100"
+          >
+            Input
+          </label>
+          <div className="mt-1 flex rounded-md shadow-sm">
+            <div className="relative flex flex-grow items-stretch focus-within:z-10">
+              <input
+                ref={inputRef}
+                type="text"
+                name="input"
+                id="input"
+                className="block w-full rounded-l-md border-none bg-neutral-200 px-2 py-1.5 placeholder-gray-400 shadow-sm focus:ring-0 dark:bg-neutral-600 sm:text-sm"
+                placeholder="Введите код"
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleInputSubmit(input)}
+              />
+            </div>
+            <button
+              type="button"
+              className="relative -ml-px inline-flex items-center space-x-2 rounded-r-md border border-none border-gray-300 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 hover:cursor-pointer hover:bg-gray-100 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+              onClick={() => handleInputSubmit(input)}
+            >
+
+              <span>Submit</span>
+            </button>
+          </div>
         </div>
       </Flex>
     </>

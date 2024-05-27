@@ -1,4 +1,3 @@
-
 import ProgressBar from "@/components/ui/ProgressBar/ProgressBar";
 import Navbar from "@/components/ui/Navbar";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -8,14 +7,22 @@ import "./globals.css";
 import Nav from "@/components/ui/Nav";
 import MainTheme from "@/components/MainTheme";
 import LargeWithLogoLeft from "@/components/ui/Footer";
-import '../public/fonts.css';
+import "../public/fonts.css";
+import localfont from "next/font/local";
 import { Global } from "@emotion/react";
 
-
-
-
-
 const inter = Inter({ subsets: ["latin"] });
+
+const euclid = localfont(
+  {
+    src: [
+      {
+        path: "../public/fonts/EuclidCircularARegular.ttf",
+        weight: "500",
+      }
+    ],
+    variable: "--font-euclid"
+  });
 
 export const metadata: Metadata = {
   title: "Pyteezy",
@@ -29,19 +36,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${euclid.variable} font-sansmono`}>
         <ChakraProvider>
-       
-          <Nav/>
+          <Nav />
           <ProgressBar />
-          <main>
-           
-          {children}
-          
-          </main>
-          
+
+          <main>{children}</main>
+
           {/* <BackToTopButton/> */}
-          <LargeWithLogoLeft/>
+          <LargeWithLogoLeft />
         </ChakraProvider>
       </body>
     </html>

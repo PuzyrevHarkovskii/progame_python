@@ -1,7 +1,7 @@
 // components/Quiz.tsx
 import { useState } from 'react';
-import { Box, Button, Checkbox, Stack, Text, Heading } from '@chakra-ui/react';
-
+import { Box, Button, Checkbox, Stack, Text, Heading, ChakraProvider } from '@chakra-ui/react';
+import MainTheme from "@/components/MainTheme";
 interface QuizProps {
   question: string;
   options: string[];
@@ -38,6 +38,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswers }) => {
       borderRadius="md" 
       borderStyle="dashed"
     >
+      <ChakraProvider theme={MainTheme}>
       <Heading mb="0.5em" size="md" textAlign="left">
         {question}
       </Heading>
@@ -64,6 +65,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswers }) => {
           {result}
         </Text>
       )}
+      </ChakraProvider>
     </Box>
   );
 };

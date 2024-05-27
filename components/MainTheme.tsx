@@ -1,5 +1,5 @@
 // theme.js
-import { extendTheme } from "@chakra-ui/react";
+import { ListItem, extendTheme } from "@chakra-ui/react";
 
 const MainTheme = extendTheme({
   styles: {
@@ -54,6 +54,13 @@ const MainTheme = extendTheme({
       },
     },
     Text: {
+      baseStyle: {
+        py: 2,
+        fontFamily: "Euclid Circular A",
+        fontSize: 'xl',
+      },
+    },
+    ListItem: {
       baseStyle: {
         py: 2,
         fontFamily: "Euclid Circular A",

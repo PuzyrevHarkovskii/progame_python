@@ -17,8 +17,8 @@ import {
   useColorMode,
   Center,
 } from '@chakra-ui/react'
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { BsSun, BsMoonStarsFill } from 'react-icons/bs'
+import {  SunIcon } from '@chakra-ui/icons'
+import {  BsMoonStarsFill } from 'react-icons/bs'
 interface Props {
   children: React.ReactNode
 }
