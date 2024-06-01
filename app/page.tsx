@@ -97,9 +97,9 @@ export default function Home() {
             </Heading>
           </Link>
 
-          <Link href="/lessons/branching">
+          <Link href="/lessons/branching_pass">
             <Heading size="md" pl="10">
-              Условные операторы if, else
+              pass, сравнение с None, тернарный оператор
             </Heading>
           </Link>
 
