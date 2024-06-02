@@ -56,11 +56,11 @@ export default function App() {
                 language="python"
                 code={`a = int(input("Введите число"))
 if a > 10:
-    print("Больше десяти")
+  print("Больше десяти")
 elif a == 10:
-    print("Это десять")
+  print("Это десять")
 else:
-    print("Меньше десяти")`}
+  print("Меньше десяти")`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -339,14 +339,14 @@ print('Хорошо')`}
                 language="python"
                 code={`a = 0
 if a != 0:
-    print('Хорошо')
+  print('Хорошо')
 
 z = ''
 if z != '':
-    print('Неплохо')
+  print('Неплохо')
 
 if z != '' and a != 0:
-    print('Очень хорошо  :-)')`}
+  print('Очень хорошо  :-)')`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -357,14 +357,14 @@ if z != '' and a != 0:
                 language="python"
                 code={`a = 0
 if a:
-    print('Хорошо')
+print('Хорошо')
 
 z = ''
 if z:
-    print('Неплохо')
+  print('Неплохо')
 
 if z and a:
-    print('Очень хорошо  :-)')`}
+  print('Очень хорошо  :-)')`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -453,7 +453,7 @@ y = 2
 result = x > 1 and x == 10 or y < 5
 print(result) 
                 
-                result = x > 1 and (x == 10 or y < 5)
+result = x > 1 and (x == 10 or y < 5)
 print(result)
                 `}
                 showLineNumbers={false}

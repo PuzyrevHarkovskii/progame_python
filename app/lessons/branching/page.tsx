@@ -111,7 +111,7 @@ print(a < 5)`}
                 language="python"
                 code={`a = int(input("Введите число"))
 if a > 10:
-print("Число больше 10")`}
+  print("Число больше 10")`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -203,9 +203,9 @@ print("Ура!")`}
                 language="python"
                 code={`a = int(input("Введите число"))
 if a > 10:
-    print("Больше десяти")
+  print("Больше десяти")
 else:
-    print("Меньше либо равно десяти")`}
+  print("Меньше либо равно десяти")`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -258,9 +258,9 @@ else:
                 language="python"
                 code={`a = int(input("Введите число"))
 if a > 10:
-    print("Больше десяти")
+  print("Больше десяти")
 else:
-    print("Меньше либо равно десяти")`}
+  print("Меньше либо равно десяти")`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>

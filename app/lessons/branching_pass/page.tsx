@@ -8,9 +8,6 @@ import {
   OrderedList,
 } from "@chakra-ui/react";
 import { PythonProvider } from "react-py";
-import { CheckCircleIcon } from "@chakra-ui/icons";
-import { List, ListItem, UnorderedList, Image } from "@chakra-ui/react";
-import PythonCompiler from "@/components/PythonCompiler";
 import CodeFragment from "@/components/CodeFragment";
 import MainTheme from "@/components/MainTheme";
 import {
@@ -57,7 +54,7 @@ export default function App() {
                 code={`foo = input("Введите что-нибудь")
 if not foo:
 else:
-    print(foo)`}
+  print(foo)`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>Такая программа завершится с ошибкой:</Text>
@@ -76,9 +73,9 @@ else:
                 language="python"
                 code={`foo = input("Введите что-нибудь")
 if not foo:
-    pass
+  pass
 else:
-    print(foo)`}
+  print(foo)`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -100,9 +97,9 @@ else:
                 code={`t = input("Температура тела:")
 t = float(t)
 if t == 36.6:
-    pass 
+  pass 
 else:
-    print("Вызывайте врача!")`}
+  print("Вызывайте врача!")`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -114,9 +111,9 @@ else:
                 code={`t = input("Температура тела:")
 t = float(t)
 if t == 36.6:
-    print("Радуйтесь, что все хорошо!") 
+  print("Радуйтесь, что все хорошо!") 
 else:
-    print("Вызывайте врача!")`}
+  print("Вызывайте врача!")`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -143,17 +140,17 @@ else:
 pass  # Какие-то полезные действия
             
 if b is not None: 
-    pass  # Какие-то полезные действия`}
+  pass  # Какие-то полезные действия`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>Неправильно:</Text>
               <CodeFragment
                 language="python"
                 code={`if a == None: 
-    pass  # Какие-то беcполезные действия
+  pass  # Какие-то беcполезные действия
             
-    if b != None: 
-        pass  # Какие-то беcполезные действия`}
+if b != None: 
+  pass  # Какие-то беcполезные действия`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -201,8 +198,7 @@ if a > 10: print("Число больше 10")`}
                 code={`a = int(input("Введите число"))
 if a > 10: print("Число больше 10")
 elif a < 10: print('Число меньше 10')
-else: print('Это 10!')
-                `}
+else: print('Это 10!')`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -214,8 +210,7 @@ else: print('Это 10!')
                 code={`a = int(input("Введите число"))
 if a > 10: print("Число больше 10")
 else: 
-    print('Число меньше либо равно 10')')
-                `}
+  print('Число меньше либо равно 10')`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -226,11 +221,9 @@ else:
                 language="python"
                 code={`a = int(input("Введите число"))
 if a > 10: print("Число больше")
-    print('10')
+  print('10')
 else: 
-    print('Число меньше либо равно 10')
-                
-                `}
+  print('Число меньше либо равно 10')`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -248,10 +241,9 @@ else:
                 code={`confirm = input('Введите "да" или "нет"')
 
 if confirm == 'да':
-    message = 'Вы согласились'
+  message = 'Вы согласились'
 else:
-    message = 'Вы отказались'')
-                `}
+  message = 'Вы отказались'')`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -265,9 +257,8 @@ else:
               <CodeFragment
                 language="python"
                 code={`confirm = input('Введите "да" или "нет"')
-                message = 'Вы согласились' if confirm == 'да' else 'Вы отказались'
-                print(message)
-                `}
+message = 'Вы согласились' if confirm == 'да' else 'Вы отказались'
+print(message)`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -284,8 +275,7 @@ else:
               <CodeFragment
                 language="python"
                 code={`confirm = input('Введите "да" или "нет"')
-                message = 'Вы согласились' if confirm == 'да'
-                `}
+message = 'Вы согласились' if confirm == 'да'`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -323,8 +313,8 @@ print(message)`}
                 language="python"
                 code={`a = int(input("Введите число"))
 if a > 10:
-    if a < 20:
-        print('Это число больше 10, но меньше 20')`}
+  if a < 20:
+    print('Это число больше 10, но меньше 20')`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
@@ -342,7 +332,7 @@ if a > 10:
                 language="python"
                 code={`a = int(input("Введите число"))
 if a > 10 and a < 20:
-    print('Это число больше 10, но меньше 20')`}
+  print('Это число больше 10, но меньше 20')`}
                 showLineNumbers={false}
               ></CodeFragment>
               <Text>
