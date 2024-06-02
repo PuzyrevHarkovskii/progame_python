@@ -116,6 +116,11 @@ export default function Home() {
                 Индексы строки, срезы строк и оператор in
               </Heading>
             </Link>
+            <Link href="/lessons/adv_strings_format">
+              <Heading size="md" pl="10">
+                Форматирование строк
+              </Heading>
+            </Link>
           </ChakraProvider>
         </Box>
       </Container>
