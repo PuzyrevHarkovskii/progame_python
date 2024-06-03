@@ -129,6 +129,7 @@ print(result)
               вполне можно встретить в чужом исходном коде. Мы же рассмотрим
               более предпочтительные способы форматирования строк.
             </Text>
+            <PythonCompiler/>
             <Heading>Метод format</Heading>
             <Text>
               Еще один способ подстановки — с помощью метода строк format. Этот
@@ -157,9 +158,9 @@ print(result)
             <CodeFragment
               language="python"
               code={`a = 10
-              b = 3
-              c = a + b
-              print("{1}+{0}={2}".format(a, b, c))
+b = 3
+c = a + b
+print("{1}+{0}={2}".format(a, b, c))
 `}
               showLineNumbers={false}
             ></CodeFragment>
@@ -181,6 +182,7 @@ print(result)`}
               не нужно, вы всегда сможете вернуться к справочнику и посмотреть
               что к чему.
             </Text>
+            <PythonCompiler/>
             <Heading>F-строки</Heading>
             <Text>
               Самый современный способ форматирования — это f-строки. Их

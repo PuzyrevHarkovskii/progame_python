@@ -121,6 +121,12 @@ export default function Home() {
                 Форматирование строк
               </Heading>
             </Link>
+            <Link href="/lessons/while">
+              <Heading size="xl">6. Циклы, while</Heading>
+            </Link>
+            <Link href="/lessons/lists">
+              <Heading size="xl">7. Списки, кортежи, цикл for</Heading>
+            </Link>
           </ChakraProvider>
         </Box>
       </Container>
