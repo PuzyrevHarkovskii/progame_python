@@ -44,7 +44,7 @@ export default function LargeWithLogoLeft() {
             <Box>
               <Logo />
             </Box>
-            <Text color={'white'} fontSize={'sm'}>© 2022 Chakra Templates. All rights reserved</Text>
+            <Text color={'white'} fontSize={'sm'}>© 2024 made by @app1e.jews</Text>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader >Product</ListHeader>

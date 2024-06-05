@@ -30,43 +30,22 @@ const options = ["'строка №1", '"строка №2"', "'строка №
 const correctAnswers = ['"строка №2"', "'строка №3'"];
 const question = "Какие строки верные с точки зрения Питона?";
 
-export default function App() {
+export default function NotFound() {
   return (
     <div>
       <Container maxW="container.md">
         <Box p={5}>
           <ChakraProvider theme={MainTheme}>
-            <PythonProvider>
             <Heading size={'3xl'} textAlign={'center'}></Heading>
-           
-            </PythonProvider>
+            <Image
+            py={"5"}
+            rounded={'lg'}
+            src={`/Images/not_found.png`}
+          ></Image>
           </ChakraProvider>
-          <NavigationButtons
-            leftButtonLink="/lessons/PEP8"
-            rightButtonLink="/lessons/Variables-Operations"
-          />
+          
         </Box>
       </Container>
     </div>
   );
 }
-
-
-
-
-{/* <CodeFragment
-language="python"
-code={`result = 55 + 125
-print("Результат=" + result)`}
-showLineNumbers={false}
-></CodeFragment> */}
-
-{/* <Box
-py={3}
-px={3}
-border="1px solid"
-borderColor="gray.200"
-borderRadius="md"
-borderLeftColor="blue.300"
-borderLeftWidth="6px"
-> */}
