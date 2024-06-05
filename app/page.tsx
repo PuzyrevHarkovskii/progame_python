@@ -127,6 +127,21 @@ export default function Home() {
             <Link href="/lessons/lists">
               <Heading size="xl">7. Списки, кортежи, цикл for</Heading>
             </Link>
+            <Link href="/lessons/list_for">
+              <Heading size="md" pl="10">
+                Цикл for
+              </Heading>
+            </Link>
+            <Link href="/lessons/list_for">
+              <Heading size="md" pl="10">
+                Range
+              </Heading>
+            </Link>
+            <Link href="/lessons/list_for">
+              <Heading size="md" pl="10">
+                Tuple
+              </Heading>
+            </Link>
           </ChakraProvider>
         </Box>
       </Container>
