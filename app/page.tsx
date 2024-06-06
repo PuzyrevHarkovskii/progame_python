@@ -142,6 +142,12 @@ export default function Home() {
                 Tuple
               </Heading>
             </Link>
+            <Link href="/lessons/lists">
+              <Heading size="xl">8. Функции</Heading>
+            </Link>
+            <Link href="/lessons/lists">
+              <Heading size="xl">9. ООП</Heading>
+            </Link>
           </ChakraProvider>
         </Box>
       </Container>
