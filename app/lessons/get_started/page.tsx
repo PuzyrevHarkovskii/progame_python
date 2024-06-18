@@ -1,15 +1,16 @@
 "use client";
-import { Container, Box, Heading, Text, Code } from "@chakra-ui/react";
+import { Container, Box, Heading, Text, Code, ChakraProvider } from "@chakra-ui/react";
 import { PythonProvider } from "react-py";
 import { CheckCircleIcon } from "@chakra-ui/icons";
 import { List, ListItem, UnorderedList, Image } from "@chakra-ui/react";
 import PythonCompiler from "@/components/PythonCompiler";
 import CodeFragment from "@/components/CodeFragment";
 import Link from "next/link";
-
+import MainTheme from "@/components/MainTheme";
 export default function FirstSteps() {
   return (
     <div>
+      <ChakraProvider theme={MainTheme}>
       <Container maxW="container.md">
         <Box p={5}>
         <PythonProvider>
@@ -165,6 +166,7 @@ export default function FirstSteps() {
           </PythonProvider>
         </Box>
       </Container>
+      </ChakraProvider>
     </div>
   );
 }

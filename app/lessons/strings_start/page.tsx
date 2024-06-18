@@ -36,6 +36,7 @@ export default function Variables() {
       <Container maxW="container.md">
         <Box p={5}>
           <ChakraProvider theme={MainTheme}>
+            <PythonProvider>
             <Heading size={"3xl"} textAlign={"center"}>
               Строки
             </Heading>
@@ -83,12 +84,7 @@ b = 'Второй пример с одинарными кавычками'`}
             />
 
             <Heading>Программа со строками</Heading>
-            <Text>
-              Для написания программы из этого урока вы можете создать новый
-              файл, либо очистить файл с программой из предыдущего урока.
-              Главное, чтобы в файле был только тот исходный код, который
-              относится к текущей задаче.
-            </Text>
+           
             <Text>
               Присвойте переменной с именем <Code>string</Code> любой текст. То
               есть значение для переменной <Code>string</Code> должно быть
@@ -99,6 +95,7 @@ b = 'Второй пример с одинарными кавычками'`}
               функцией <Code colorScheme="blue">print</Code>.
             </Text>
             <PythonCompiler />
+            
             <Heading>Подробнее о функциях</Heading>
             <Text>
               В своих программах вы уже использовали встроенную функцию print.
@@ -125,6 +122,7 @@ b = 'Второй пример с одинарными кавычками'`}
               «написать в скобках названия переменных через запятую», мы будем
               говорить «передать аргументы».
             </Text>
+            <Image alignContent={'center'} height={'300'} src="/images/snake_heart.png"></Image>
             <Text>
               При вызове функции, код основной программы останавливается,
               управление передается функции и ее код начинает выполняться. После
@@ -205,11 +203,11 @@ print('Привет,', name)`}
             <Text>Присвойте переменной с именем string значение, полученное с помощью функции input.</Text>
             <Text>Следующей строкой напечатайте значение переменной функцией print.</Text>
             <PythonCompiler />
-           
+            </PythonProvider>
           </ChakraProvider>
           <NavigationButtons
             leftButtonLink="/lessons/PEP8"
-            rightButtonLink="/lessons/variables-conc"
+            rightButtonLink="/lessons/strings_conc"
           />
         </Box>
       </Container>

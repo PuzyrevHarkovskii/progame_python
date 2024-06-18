@@ -2,6 +2,7 @@
 import { ListItem, extendTheme } from "@chakra-ui/react";
 
 const MainTheme = extendTheme({
+  
   styles: {
     global: {
       // Добавляем глобальные стили, чтобы применить шрифты ко всему тексту
@@ -33,17 +34,20 @@ const MainTheme = extendTheme({
       },
       variants: {
         exercise: {
-          py:3,
-          px:3,
-          border:"1px solid",
-          borderColor:"gray.200",
-          borderRadius:"md",
-          borderLeftColor:"blue.300",
-          borderLeftWidth:"6px",
+          py: 3,
+          px: 3,
+          border: "1px solid",
+          borderColor: "gray.200",
+          borderRadius: "md",
+          borderLeftColor: "blue.300",
+          borderLeftWidth: "6px",
         },
       },
     },
+
+    
     Heading: {
+      
       baseStyle: {
         mt: "1em",
         mb: "0.5em",
@@ -51,20 +55,33 @@ const MainTheme = extendTheme({
         size: "xl",
         fontWeight: "900",
         fontFamily: "Euclid Circular A",
+
+        
+        
       },
+      darkBaseStyle: {color: 'white'}
     },
     Text: {
       baseStyle: {
         py: 2,
         fontFamily: "Euclid Circular A",
-        fontSize: 'xl',
+        fontSize: "xl",
+        // color: "#5d5e7c",
+      },
+    },
+    Code: {
+      baseStyle: {
+        py: 2,
+        fontFamily: "Euclid Circular A",
+        fontSize: "xl",
+        // color: "#5d5e7c",
       },
     },
     ListItem: {
       baseStyle: {
         py: 2,
         fontFamily: "Euclid Circular A",
-        fontSize: 'xl',
+        fontSize: "xl",
       },
     },
   },

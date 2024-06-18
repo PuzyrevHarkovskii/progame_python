@@ -37,7 +37,7 @@ export default function LargeWithLogoLeft() {
       bg='#2C314D'
       >
       <Container as={Stack} maxW={'6xl'} py={10}>
-        <SimpleGrid
+        <SimpleGrid color={'white'}
           templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }}
           spacing={10}>
           <Stack spacing={6}>
@@ -46,7 +46,7 @@ export default function LargeWithLogoLeft() {
             </Box>
             <Text color={'white'} fontSize={'sm'}>© 2024 made by @app1e.jews</Text>
           </Stack>
-          <Stack align={'flex-start'}>
+          <Stack align={'flex-start'} >
             <ListHeader >Product</ListHeader>
             <Box color={'white'} as="a" href={'#'}>
               Overview

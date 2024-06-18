@@ -49,7 +49,7 @@ export default function Nav() {
     <>
       <Box bg={useColorModeValue('#0956F3', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box>Logo</Box>
+          <Box color={'white'} fontSize={'xl'}>Pyteezy</Box>
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
