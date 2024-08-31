@@ -23,7 +23,6 @@ import {
   Td,
 } from "@chakra-ui/react";
 
-import Quiz from "@/components/Quiz";
 import NavigationButtons from "@/components/ui/NavigationButtons";
 
 const options = ["'строка №1", '"строка №2"', "'строка №3'", 'строка №4"'];

@@ -10,10 +10,7 @@ const MainTheme = extendTheme({
       
     },
   },
-  fonts: {
-    heading: `'Open Sans', sans-serif`,
-    body: `'Raleway', sans-serif`,
-  },
+  
   components: {
     Container: {
       baseStyle: {
@@ -58,7 +55,7 @@ const MainTheme = extendTheme({
         py: 2,
        
         fontSize: "xl",
-        // color: "#5d5e7c",
+        
       },
     },
     Code: {
@@ -66,7 +63,7 @@ const MainTheme = extendTheme({
         py: 2,
        
         fontSize: "xl",
-        // color: "#5d5e7c",
+        
       },
     },
     ListItem: {
