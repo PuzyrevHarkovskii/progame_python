@@ -11,6 +11,7 @@ import "../public/fonts.css";
 import localfont from "next/font/local";
 import { Global } from "@emotion/react";
 import "../public/fonts.css";
+import BackToTopButton from "@/components/BackToTopButton";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -10,7 +10,6 @@ export default function ColorModeToggle() {
      * Ideally, only the button component should be used (without Flex).
      * Props compatible with <Button /> are supported.
      */
-    
       <Button
         aria-label="Toggle Color Mode"
         onClick={toggleColorMode}

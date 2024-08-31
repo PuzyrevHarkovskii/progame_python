@@ -6,21 +6,13 @@ const MainTheme = extendTheme({
   styles: {
     global: {
       // Добавляем глобальные стили, чтобы применить шрифты ко всему тексту
-      body: {
-        fontFamily: "Euclid Circular A",
-      },
-      heading: {
-        fontFamily: "YourCustomFont, system-ui, sans-serif",
-      },
-      mono: {
-        fontFamily: "Euclid Circular A",
-      },
+     
+      
     },
   },
   fonts: {
-    body: "Euclid Circular A",
-    heading: "Euclid Circular A",
-    mono: "Euclid Circular A",
+    heading: `'Open Sans', sans-serif`,
+    body: `'Raleway', sans-serif`,
   },
   components: {
     Container: {
@@ -54,7 +46,7 @@ const MainTheme = extendTheme({
         textAlign: "left",
         size: "xl",
         fontWeight: "900",
-        fontFamily: "Euclid Circular A",
+       
 
         
         
@@ -64,7 +56,7 @@ const MainTheme = extendTheme({
     Text: {
       baseStyle: {
         py: 2,
-        fontFamily: "Euclid Circular A",
+       
         fontSize: "xl",
         // color: "#5d5e7c",
       },
@@ -72,7 +64,7 @@ const MainTheme = extendTheme({
     Code: {
       baseStyle: {
         py: 2,
-        fontFamily: "Euclid Circular A",
+       
         fontSize: "xl",
         // color: "#5d5e7c",
       },
@@ -80,7 +72,7 @@ const MainTheme = extendTheme({
     ListItem: {
       baseStyle: {
         py: 2,
-        fontFamily: "Euclid Circular A",
+        
         fontSize: "xl",
       },
     },

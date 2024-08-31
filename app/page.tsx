@@ -11,11 +11,6 @@ import {
 import { useEffect } from "react";
 import Link from "next/link";
 import "./globals.css";
-import NavigationButtons from "@/components/ui/NavigationButtons";
-import ColorModeToggle from "@/components/ui/darkTheme";
-import { PythonProvider } from "react-py";
-import PythonCompiler from "@/components/PythonCompiler";
-import PythonCompiler2 from "@/components/PythonCompiler2";
 import MainTheme from "@/components/MainTheme";
 export default function Home() {
   useEffect(() => {

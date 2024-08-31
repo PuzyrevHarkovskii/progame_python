@@ -16,7 +16,7 @@ import {
   DarkMode,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
-import ColorModeToggle from "./darkTheme";
+import ColorModeToggle from "./darkThemeButton";
 // import { Logo } from "@choc-ui/logo";
 
 export default function Navbar() {

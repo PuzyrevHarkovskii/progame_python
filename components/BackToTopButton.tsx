@@ -1,30 +1,30 @@
 // components/BackToTopButton.tsx
-'use client'
-import { useEffect, useState } from 'react';
+"use client";
+import { useEffect, useState } from "react";
 
 const BackToTopButton: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset > 1300) {
         setVisible(true);
       } else {
         setVisible(false);
       }
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
 
     return () => {
-      window.removeEventListener('scroll', toggleVisibility);
+      window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -32,7 +32,9 @@ const BackToTopButton: React.FC = () => {
     <button
       type="button"
       onClick={scrollToTop}
-      className={`!fixed bottom-5 end-40 ${visible ? 'block' : 'hidden'} rounded-full bg-blue-600 p-5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg`}
+      className={`!fixed bottom-5 end-40 ${
+        visible ? "block" : "hidden"
+      } rounded-full bg-gray-300 p-5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg`}
       id="btn-back-to-top"
     >
       <span className="[&>svg]:w-4">
